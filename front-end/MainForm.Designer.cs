@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.EmployeeTab = new System.Windows.Forms.TabPage();
+            this.PrticipantTab = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +51,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.EmployeeTab);
+            this.tabControl1.Controls.Add(this.PrticipantTab);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -60,25 +60,25 @@
             this.tabControl1.Size = new System.Drawing.Size(887, 494);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // EmployeeTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(879, 468);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.EmployeeTab.Location = new System.Drawing.Point(4, 22);
+            this.EmployeeTab.Name = "EmployeeTab";
+            this.EmployeeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.EmployeeTab.Size = new System.Drawing.Size(879, 468);
+            this.EmployeeTab.TabIndex = 0;
+            this.EmployeeTab.Text = "Medarbejdere";
+            this.EmployeeTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // PrticipantTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.PrticipantTab.Location = new System.Drawing.Point(4, 22);
+            this.PrticipantTab.Name = "PrticipantTab";
+            this.PrticipantTab.Padding = new System.Windows.Forms.Padding(3);
+            this.PrticipantTab.Size = new System.Drawing.Size(879, 468);
+            this.PrticipantTab.TabIndex = 1;
+            this.PrticipantTab.Text = "Deltagere";
+            this.PrticipantTab.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -204,8 +204,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage EmployeeTab;
+        private System.Windows.Forms.TabPage PrticipantTab;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem filerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nyToolStripMenuItem;
