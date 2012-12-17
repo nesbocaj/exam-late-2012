@@ -11,13 +11,13 @@ namespace back_end
     {
         private static Security _instance;
         private string _salt, _pepper;
-        private SHA512 _hasher;
+        private SHA1 _hasher;
 
         private Security()
         {
             _salt = "salt";
             _pepper = "pepper";
-            _hasher = SHA512Cng.Create();
+            _hasher = SHA1Cng.Create();
         }
 
         public static Security Instance
