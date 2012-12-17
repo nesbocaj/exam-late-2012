@@ -33,8 +33,6 @@
             this.PrticipantTab = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hjælpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deltagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kursusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +42,14 @@
             this.kontorassistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fakturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.åbnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hjælpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjælpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseTabControl1 = new exam_late_2012.BaseTabControl();
+            this.baseTabControl2 = new exam_late_2012.BaseTabControl();
             this.tabControl1.SuspendLayout();
+            this.EmployeeTab.SuspendLayout();
+            this.PrticipantTab.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +66,7 @@
             // 
             // EmployeeTab
             // 
+            this.EmployeeTab.Controls.Add(this.baseTabControl1);
             this.EmployeeTab.Location = new System.Drawing.Point(4, 22);
             this.EmployeeTab.Name = "EmployeeTab";
             this.EmployeeTab.Padding = new System.Windows.Forms.Padding(3);
@@ -72,6 +77,7 @@
             // 
             // PrticipantTab
             // 
+            this.PrticipantTab.Controls.Add(this.baseTabControl2);
             this.PrticipantTab.Location = new System.Drawing.Point(4, 22);
             this.PrticipantTab.Name = "PrticipantTab";
             this.PrticipantTab.Padding = new System.Windows.Forms.Padding(3);
@@ -102,18 +108,6 @@
             this.filerToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.filerToolStripMenuItem.Text = "Filer";
             // 
-            // redigerToolStripMenuItem
-            // 
-            this.redigerToolStripMenuItem.Name = "redigerToolStripMenuItem";
-            this.redigerToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.redigerToolStripMenuItem.Text = "Rediger";
-            // 
-            // hjælpToolStripMenuItem
-            // 
-            this.hjælpToolStripMenuItem.Name = "hjælpToolStripMenuItem";
-            this.hjælpToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
-            this.hjælpToolStripMenuItem.Text = "Vis";
-            // 
             // nyToolStripMenuItem
             // 
             this.nyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,25 +117,25 @@
             this.medarbejderToolStripMenuItem,
             this.fakturaToolStripMenuItem});
             this.nyToolStripMenuItem.Name = "nyToolStripMenuItem";
-            this.nyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nyToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.nyToolStripMenuItem.Text = "Ny";
             // 
             // deltagerToolStripMenuItem
             // 
             this.deltagerToolStripMenuItem.Name = "deltagerToolStripMenuItem";
-            this.deltagerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deltagerToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.deltagerToolStripMenuItem.Text = "Deltager";
             // 
             // kursusToolStripMenuItem
             // 
             this.kursusToolStripMenuItem.Name = "kursusToolStripMenuItem";
-            this.kursusToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kursusToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.kursusToolStripMenuItem.Text = "Kursus";
             // 
             // klasseToolStripMenuItem
             // 
             this.klasseToolStripMenuItem.Name = "klasseToolStripMenuItem";
-            this.klasseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.klasseToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.klasseToolStripMenuItem.Text = "Klasse";
             // 
             // medarbejderToolStripMenuItem
@@ -150,7 +144,7 @@
             this.lærerToolStripMenuItem,
             this.kontorassistentToolStripMenuItem});
             this.medarbejderToolStripMenuItem.Name = "medarbejderToolStripMenuItem";
-            this.medarbejderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.medarbejderToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.medarbejderToolStripMenuItem.Text = "Medarbejder";
             // 
             // lærerToolStripMenuItem
@@ -168,20 +162,48 @@
             // fakturaToolStripMenuItem
             // 
             this.fakturaToolStripMenuItem.Name = "fakturaToolStripMenuItem";
-            this.fakturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fakturaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.fakturaToolStripMenuItem.Text = "Faktura";
             // 
             // åbnToolStripMenuItem
             // 
             this.åbnToolStripMenuItem.Name = "åbnToolStripMenuItem";
-            this.åbnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.åbnToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.åbnToolStripMenuItem.Text = "Afslut";
+            // 
+            // redigerToolStripMenuItem
+            // 
+            this.redigerToolStripMenuItem.Name = "redigerToolStripMenuItem";
+            this.redigerToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.redigerToolStripMenuItem.Text = "Rediger";
+            // 
+            // hjælpToolStripMenuItem
+            // 
+            this.hjælpToolStripMenuItem.Name = "hjælpToolStripMenuItem";
+            this.hjælpToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
+            this.hjælpToolStripMenuItem.Text = "Vis";
             // 
             // hjælpToolStripMenuItem1
             // 
             this.hjælpToolStripMenuItem1.Name = "hjælpToolStripMenuItem1";
             this.hjælpToolStripMenuItem1.Size = new System.Drawing.Size(51, 20);
             this.hjælpToolStripMenuItem1.Text = "Hjælp";
+            // 
+            // baseTabControl1
+            // 
+            this.baseTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseTabControl1.Location = new System.Drawing.Point(3, 3);
+            this.baseTabControl1.Name = "baseTabControl1";
+            this.baseTabControl1.Size = new System.Drawing.Size(873, 462);
+            this.baseTabControl1.TabIndex = 0;
+            // 
+            // baseTabControl2
+            // 
+            this.baseTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.baseTabControl2.Location = new System.Drawing.Point(3, 3);
+            this.baseTabControl2.Name = "baseTabControl2";
+            this.baseTabControl2.Size = new System.Drawing.Size(873, 462);
+            this.baseTabControl2.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -194,6 +216,8 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
+            this.EmployeeTab.ResumeLayout(false);
+            this.PrticipantTab.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,6 +244,8 @@
         private System.Windows.Forms.ToolStripMenuItem redigerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjælpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjælpToolStripMenuItem1;
+        private BaseTabControl baseTabControl1;
+        private BaseTabControl baseTabControl2;
     }
 }
 

@@ -138,13 +138,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         protected System.Windows.Forms.ListView listView1;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Button button3;
+        protected System.Windows.Forms.Button button2;
+        protected System.Windows.Forms.Button button1;
+        protected System.Windows.Forms.Panel panel2;
+        protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.TextBox textBox1;
     }
 }
