@@ -41,8 +41,10 @@
             this.OKButton = new System.Windows.Forms.Button();
             this.CourseList = new System.Windows.Forms.ListBox();
             this.CourseBox = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.CourseBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -117,13 +119,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 272);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(355, 30);
+            this.panel1.Size = new System.Drawing.Size(374, 30);
             this.panel1.TabIndex = 8;
             // 
             // CancelButton
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Location = new System.Drawing.Point(187, 3);
+            this.CancelButton.Location = new System.Drawing.Point(206, 3);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
             this.CancelButton.TabIndex = 1;
@@ -133,7 +135,7 @@
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Location = new System.Drawing.Point(268, 3);
+            this.OKButton.Location = new System.Drawing.Point(287, 3);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 0;
@@ -143,9 +145,10 @@
             // CourseList
             // 
             this.CourseList.FormattingEnabled = true;
-            this.CourseList.Location = new System.Drawing.Point(227, 25);
+            this.CourseList.HorizontalScrollbar = true;
+            this.CourseList.Location = new System.Drawing.Point(6, 19);
             this.CourseList.Name = "CourseList";
-            this.CourseList.Size = new System.Drawing.Size(120, 225);
+            this.CourseList.Size = new System.Drawing.Size(120, 212);
             this.CourseList.TabIndex = 9;
             // 
             // CourseBox
@@ -165,19 +168,30 @@
             this.CourseBox.TabStop = false;
             this.CourseBox.Text = "Kursus";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.CourseList);
+            this.groupBox1.Location = new System.Drawing.Point(227, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(133, 239);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Eksisterende Kurser";
+            // 
             // AddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 302);
+            this.ClientSize = new System.Drawing.Size(374, 302);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CourseBox);
-            this.Controls.Add(this.CourseList);
             this.Controls.Add(this.panel1);
             this.Name = "AddCourse";
             this.Text = "Kursus";
             this.panel1.ResumeLayout(false);
             this.CourseBox.ResumeLayout(false);
             this.CourseBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,5 +211,6 @@
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.ListBox CourseList;
         private System.Windows.Forms.GroupBox CourseBox;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
