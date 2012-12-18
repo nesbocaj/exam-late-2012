@@ -51,6 +51,24 @@
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseAdressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseAdressControl.Designer.cs">
+      <DependentUpon>BaseAdressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseConstactControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseConstactControl.Designer.cs">
+      <DependentUpon>BaseConstactControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasePersonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasePersonControl.Designer.cs">
+      <DependentUpon>BasePersonControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseTabControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +85,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseAdressControl.resx">
+      <DependentUpon>BaseAdressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseConstactControl.resx">
+      <DependentUpon>BaseConstactControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasePersonControl.resx">
+      <DependentUpon>BasePersonControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseTabControl.resx">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
