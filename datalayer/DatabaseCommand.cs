@@ -56,7 +56,7 @@ namespace datalayer
             foreach (var value in values)
             {
                 commandString += "@value" + i + ", ";
-                AddWithValue("@value" + i, value.ToString());
+                AddWithValue("value" + i, value.ToString());
 
                 i++;
             }
@@ -104,7 +104,7 @@ namespace datalayer
         public DatabaseCommand<T> Update(string field, object value, string table)
         {
             commandString = "UPDATE " + table + " SET " + field + " = @value";
-            command.Parameters.AddWithValue("@value", value.ToString());
+            AddWithValue("value", value.ToString());
 
             return this;
         }
@@ -123,7 +123,7 @@ namespace datalayer
             foreach (var value in values)
             {
                 commandString += "@value" + i + ", ";
-                command.Parameters.AddWithValue("@value" + i, value.ToString());
+                AddWithValue("value" + i, value.ToString());
 
                 i++;
             }
@@ -169,7 +169,7 @@ namespace datalayer
             else
                 commandString += " WHERE " + field + " " + operatorStr.ToUpper() + " @value" + i;
 
-            command.Parameters.AddWithValue("@value" + i, value.ToString());
+            AddWithValue("value" + i, value.ToString());
 
             return this;
         }
@@ -191,7 +191,7 @@ namespace datalayer
         public DatabaseCommand<T> Custom(string query, object value, string parameter)
         {
             commandString += query;
-            command.Parameters.AddWithValue("@" + parameter, value.ToString());
+            AddWithValue(parameter, value.ToString());
 
             return this;
         }
@@ -201,7 +201,7 @@ namespace datalayer
             commandString += query;
 
             for (int i = 0; i < parameters.Length; i++)
-                command.Parameters.AddWithValue("@" + parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
+                AddWithValue(parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
 
             return this;
         }
