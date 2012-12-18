@@ -49,6 +49,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddCourse.designer.cs">
+    <Compile Include="AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEmployee.cs">
