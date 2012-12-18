@@ -48,20 +48,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 22);
+            this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Kursusnavn";
+            this.label1.Text = "Kursusnavn:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 48);
+            this.label2.Location = new System.Drawing.Point(6, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Kategori";
+            this.label2.Text = "Kategori:";
             // 
             // CourseNameText
             // 
@@ -80,11 +80,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 74);
+            this.label3.Location = new System.Drawing.Point(6, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Pris";
+            this.label3.Text = "Pris:";
             // 
             // PriceText
             // 
@@ -98,32 +98,32 @@
             this.DifficultyCombo.FormattingEnabled = true;
             this.DifficultyCombo.Location = new System.Drawing.Point(100, 97);
             this.DifficultyCombo.Name = "DifficultyCombo";
-            this.DifficultyCombo.Size = new System.Drawing.Size(121, 21);
+            this.DifficultyCombo.Size = new System.Drawing.Size(100, 21);
             this.DifficultyCombo.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 100);
+            this.label4.Location = new System.Drawing.Point(6, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Sværhedsgrad";
+            this.label4.Text = "Sværhedsgrad:";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.CancelButton);
             this.panel1.Controls.Add(this.OKButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 373);
+            this.panel1.Location = new System.Drawing.Point(0, 272);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 30);
+            this.panel1.Size = new System.Drawing.Size(355, 30);
             this.panel1.TabIndex = 8;
             // 
             // CancelButton
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Location = new System.Drawing.Point(350, 3);
+            this.CancelButton.Location = new System.Drawing.Point(187, 3);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
             this.CancelButton.TabIndex = 1;
@@ -133,7 +133,7 @@
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Location = new System.Drawing.Point(431, 3);
+            this.OKButton.Location = new System.Drawing.Point(268, 3);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 0;
@@ -143,9 +143,9 @@
             // CourseList
             // 
             this.CourseList.FormattingEnabled = true;
-            this.CourseList.Location = new System.Drawing.Point(386, 57);
+            this.CourseList.Location = new System.Drawing.Point(227, 25);
             this.CourseList.Name = "CourseList";
-            this.CourseList.Size = new System.Drawing.Size(120, 238);
+            this.CourseList.Size = new System.Drawing.Size(120, 225);
             this.CourseList.TabIndex = 9;
             // 
             // CourseBox
@@ -158,9 +158,9 @@
             this.CourseBox.Controls.Add(this.PriceText);
             this.CourseBox.Controls.Add(this.label4);
             this.CourseBox.Controls.Add(this.DifficultyCombo);
-            this.CourseBox.Location = new System.Drawing.Point(81, 57);
+            this.CourseBox.Location = new System.Drawing.Point(12, 12);
             this.CourseBox.Name = "CourseBox";
-            this.CourseBox.Size = new System.Drawing.Size(236, 134);
+            this.CourseBox.Size = new System.Drawing.Size(209, 129);
             this.CourseBox.TabIndex = 13;
             this.CourseBox.TabStop = false;
             this.CourseBox.Text = "Kursus";
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 403);
+            this.ClientSize = new System.Drawing.Size(355, 302);
             this.Controls.Add(this.CourseBox);
             this.Controls.Add(this.CourseList);
             this.Controls.Add(this.panel1);
