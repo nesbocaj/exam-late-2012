@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    public class ParticipantInvoiceLine : Participant
+    public class ParticipantInvoiceLine : IModel
     {
         private int _ParticipantId;
         private int _CourseInvoiceId;
@@ -32,7 +32,7 @@ namespace back_end
             get { return _CourseInvoiceId; }
         }
 
-        public int CourseId
+        public int ID
         {
             set { _CourseId = value; }
             get { return _CourseId; }

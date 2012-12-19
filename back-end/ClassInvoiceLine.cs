@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    class CourseInvoiceLine
+    class ClassInvoiceLine
     {
-        private int _CourseInvoiceId; private int _PersonId;
+        private int _ClassInvoiceId; private int _PersonId;
         private double _subtotal;
 
-        public CourseInvoiceLine()
+        public ClassInvoiceLine()
         {
 
         }
 
         public int CourseInvoiceId
         {
-            set { _CourseInvoiceId = value; }
-            get { return _CourseInvoiceId; }
+            set { _ClassInvoiceId = value; }
+            get { return _ClassInvoiceId; }
         }
 
         public int PersonId
