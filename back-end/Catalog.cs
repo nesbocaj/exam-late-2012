@@ -24,6 +24,15 @@ namespace back_end
         }
 
         /// <summary>
+        /// Provides array-like access to the catalog items
+        /// </summary>
+        public T this[int i]
+        {
+            get { return _dictionary[i]; }
+            set { _dictionary[i] = value; }
+        }
+
+        /// <summary>
         /// Add a new item to the Catalog
         /// </summary>
         /// <param name="tmp" type="T"></param>
