@@ -34,7 +34,7 @@ namespace back_end
 
         public int ID
         {
-            set { _id = _invoiceId + _personId; }
+            set { _id = Convert.ToInt32( "" + _invoiceId.ToString() + _personId.ToString()); } // concatenating the 2 numbers to get a common id, the "" is there to make sure it acts as a string
             get { return _id; }
         }
 
