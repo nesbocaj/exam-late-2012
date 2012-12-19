@@ -33,7 +33,7 @@ namespace exam_late_2012
 
         protected virtual void SaveExisting(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         protected virtual void SaveNew(object sender, EventArgs e)
