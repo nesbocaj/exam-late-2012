@@ -24,27 +24,31 @@ namespace back_end
 
         public int Position
         {
-            get { return _position; }
+            set { _position = value;}
+            get { return _position;}
         }
 
         public int SalaryRate
         {
-            get { return _salaryRate; }
+            set { _salaryRate = value;}
+            get { return _salaryRate;}
         }
 
         public int WorkingHours
         {
+            set { _workingHours = value;}
             get { return _workingHours; }
         }
 
         public string AccessWord
         {
+            set { _accessword = value;}
             get { return _accessword; }
         }
 
         public void Update()
         {
-
+           //Skal være der som en del af interface
         }
     }
 }

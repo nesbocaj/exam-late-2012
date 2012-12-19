@@ -30,7 +30,7 @@ namespace back_end
 
         public void Update()
         {
-
+            //Skal være der som en del af interface
         }
     }
 }
