@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    public class Employee : IModel
+    public class Employee : Person
     {
         private int _id, _position, _salaryRate, _workingHours;
         private string _accessword;
