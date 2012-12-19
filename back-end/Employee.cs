@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    class Employee : IModel
+    public class Employee : IModel
     {
         private int _id, _position, _salaryRate, _workingHours;
         private string _accessword;
@@ -18,42 +18,33 @@ namespace back_end
 
         public int ID
         {
-            get
-            {
-                return _id;
-            }
+            set { _id = value; }
+            get { return _id; }
         }
 
         public int Position
         {
-            get
-            {
-                return _position;
-            }
+            get { return _position; }
         }
 
         public int SalaryRate
         {
-            get
-            {
-                return _salaryRate;
-            }
+            get { return _salaryRate; }
         }
 
         public int WorkingHours
         {
-            get
-            {
-                return _workingHours;
-            }
+            get { return _workingHours; }
         }
 
         public string AccessWord
         {
-            get
-            {
-                return _accessword;
-            }
+            get { return _accessword; }
+        }
+
+        public void Update()
+        {
+
         }
     }
 }

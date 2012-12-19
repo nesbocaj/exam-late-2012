@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    class Participant : IModel
+    public class Participant : IModel
     {
         private int _id;
         private string _workCondition;
@@ -18,12 +18,19 @@ namespace back_end
 
         public int ID
         {
+            set { _id = value; }
             get { return _id; }
         }
 
         public string WorkCondition
         {
+            set { _workCondition = value; }
             get { return _workCondition; }
+        }
+
+        public void Update()
+        {
+
         }
     }
 }
