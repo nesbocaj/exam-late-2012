@@ -8,50 +8,52 @@ namespace back_end
 {
     class Employee : IModel
     {
-        public int Id;
-        public int person_Id;
-        public int positions_Id;
-        public int salary_rate;
-        public int working_hours;
-        public string accessword;
+        private int _id, _position, _salaryRate, _workingHours;
+        private string _accessword;
 
-        public Employee(int ID, int person_ID, int positions_ID, int salary_Rate, int working_Hours, string accesWord)
+        public Employee()
         {
-            Id = ID;
-            person_Id = person_ID;
-            salary_rate = salary_Rate;
-            working_hours = working_Hours;
-            accessword = accesWord;
+
         }
 
-        public int GetEmployeeId(int Id)
+        public int ID
         {
-            return Id;
+            get
+            {
+                return _id;
+            }
         }
 
-        public int GetEmployeePerson_Id(int person_Id)
+        public int Position
         {
-            return person_Id;
+            get
+            {
+                return _position;
+            }
         }
 
-        public int GetEmployeePositions_Id(int positions_Id)
+        public int SalaryRate
         {
-            return positions_Id;
+            get
+            {
+                return _salaryRate;
+            }
         }
 
-        public int GetEmployeeSalary_rate(int salary_rate)
+        public int WorkingHours
         {
-            return salary_rate;
+            get
+            {
+                return _workingHours;
+            }
         }
 
-        public int GetEmployeeWorking_Hours(int working_hours)
+        public string AccessWord
         {
-            return working_hours;
+            get
+            {
+                return _accessword;
+            }
         }
-
-        public string GetEmployeeaccessWord(string accessword)
-        {
-            return accessword;
-        }   
     }
 }
