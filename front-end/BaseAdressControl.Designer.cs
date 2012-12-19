@@ -60,7 +60,7 @@
             this.groupBox3.Size = new System.Drawing.Size(217, 154);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Beboelse:";
+            this.groupBox3.Text = "Beboelse";
             // 
             // label8
             // 

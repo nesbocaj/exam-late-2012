@@ -46,14 +46,6 @@
             this.WorkConditionBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CancelButton
-            // 
-            this.CancelButton.Location = new System.Drawing.Point(389, 3);
-            // 
-            // OKButton
-            // 
-            this.OKButton.Location = new System.Drawing.Point(470, 3);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -71,7 +63,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.74586F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.25414F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 164F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 341);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 342);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // basePersonControl1
@@ -79,7 +71,7 @@
             this.basePersonControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.basePersonControl1.Location = new System.Drawing.Point(3, 3);
             this.basePersonControl1.Name = "basePersonControl1";
-            this.basePersonControl1.Size = new System.Drawing.Size(271, 110);
+            this.basePersonControl1.Size = new System.Drawing.Size(271, 111);
             this.basePersonControl1.TabIndex = 16;
             // 
             // groupBox1
@@ -91,7 +83,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.ChosenList);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(280, 119);
+            this.groupBox1.Location = new System.Drawing.Point(280, 120);
             this.groupBox1.Name = "groupBox1";
             this.tableLayoutPanel1.SetRowSpan(this.groupBox1, 2);
             this.groupBox1.Size = new System.Drawing.Size(271, 219);
@@ -136,19 +128,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(162, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Valgte Kurser";
+            this.label1.Text = "Ønskede Kurser:";
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 16);
+            this.label2.Location = new System.Drawing.Point(6, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Mulige Kurser";
+            this.label2.Text = "Mulige Kurser:";
             // 
             // ChosenList
             // 
@@ -163,7 +155,7 @@
             // 
             this.WorkConditionBox.Controls.Add(this.WorkConditionText);
             this.WorkConditionBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WorkConditionBox.Location = new System.Drawing.Point(3, 119);
+            this.WorkConditionBox.Location = new System.Drawing.Point(3, 120);
             this.WorkConditionBox.Name = "WorkConditionBox";
             this.WorkConditionBox.Size = new System.Drawing.Size(271, 54);
             this.WorkConditionBox.TabIndex = 18;
@@ -181,7 +173,7 @@
             // baseAdressControl1
             // 
             this.baseAdressControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseAdressControl1.Location = new System.Drawing.Point(3, 179);
+            this.baseAdressControl1.Location = new System.Drawing.Point(3, 180);
             this.baseAdressControl1.Name = "baseAdressControl1";
             this.baseAdressControl1.Size = new System.Drawing.Size(271, 159);
             this.baseAdressControl1.TabIndex = 14;
@@ -191,7 +183,7 @@
             this.baseConstactControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.baseConstactControl1.Location = new System.Drawing.Point(280, 3);
             this.baseConstactControl1.Name = "baseConstactControl1";
-            this.baseConstactControl1.Size = new System.Drawing.Size(271, 110);
+            this.baseConstactControl1.Size = new System.Drawing.Size(271, 111);
             this.baseConstactControl1.TabIndex = 15;
             // 
             // AddParticipant
@@ -200,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 371);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(570, 410);
             this.Name = "AddParticipant";
             this.Text = "Opret Deltager";
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);

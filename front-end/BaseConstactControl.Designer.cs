@@ -52,7 +52,7 @@
             this.groupBox1.Size = new System.Drawing.Size(264, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kontakt Oplysninger:";
+            this.groupBox1.Text = "Kontakt Oplysninger";
             // 
             // label3
             // 

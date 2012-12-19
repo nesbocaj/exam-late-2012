@@ -103,7 +103,7 @@
             this.groupBox1.Size = new System.Drawing.Size(212, 101);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personlige Detaljer:";
+            this.groupBox1.Text = "Personlige Detaljer";
             // 
             // BasePersonControl
             // 
