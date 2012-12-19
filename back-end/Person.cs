@@ -8,7 +8,8 @@ namespace back_end
 {
     class Person : IModel
     {
-        private int _id;
+        private int _id, _ssn, _postal, _houseNumber;
+        private string _firstName, _lastName, _city;
 
         public Person()
         {
