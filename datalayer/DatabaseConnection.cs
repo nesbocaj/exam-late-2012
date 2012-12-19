@@ -38,6 +38,11 @@ namespace datalayer
             }
         }
 
+        public MySqlConnection MySql
+        {
+            get { return _connection; }
+        }
+
         public bool Open()
         {
             try

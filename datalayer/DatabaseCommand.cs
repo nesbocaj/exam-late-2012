@@ -17,7 +17,8 @@ namespace datalayer
 
         private DatabaseCommand()
         {
-
+            _command = new MySqlCommand();
+            _command.Connection = DatabaseConnection.Instance.MySql;
         }
 
         public static DatabaseCommand Init()
@@ -218,9 +219,9 @@ namespace datalayer
             {
                 if (DatabaseConnection.Instance.Open())
                 {
-                    _command = new MySqlCommand(_commandStr);
+                    _command.CommandText = _commandStr;
                     _command.ExecuteNonQuery();
-                    DatabaseConnection.Instance.Close();
+                    _connection.Close();
                 }
             }
 
@@ -233,7 +234,7 @@ namespace datalayer
             {
                 if (DatabaseConnection.Instance.Open())
                 {
-                    _command = new MySqlCommand(_commandStr);
+                    _command.CommandText = _commandStr;
                     MySqlDataReader datareader = _command.ExecuteReader();
 
                     DataTable dataTable = new DataTable();
