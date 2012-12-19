@@ -44,7 +44,10 @@ namespace back_end
             get { return _subtotal; }
         }
 
-    }
+        public void Update()
+        {
+        }       
+       }
 }
 
 
