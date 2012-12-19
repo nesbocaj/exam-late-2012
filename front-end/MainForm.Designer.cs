@@ -30,7 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.EmployeeTab = new System.Windows.Forms.TabPage();
+            this.EmployeeControl = new exam_late_2012.BaseTabControl();
             this.PrticipantTab = new System.Windows.Forms.TabPage();
+            this.ParticipantControl = new exam_late_2012.BaseTabControl();
+            this.CourseTab = new System.Windows.Forms.TabPage();
+            this.CourseControl = new exam_late_2012.BaseTabControl();
+            this.ClassTab = new System.Windows.Forms.TabPage();
+            this.ClassControl = new exam_late_2012.BaseTabControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,18 +51,12 @@
             this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjælpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjælpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.baseTabControl1 = new exam_late_2012.BaseTabControl();
-            this.baseTabControl2 = new exam_late_2012.BaseTabControl();
-            this.CourseTab = new System.Windows.Forms.TabPage();
-            this.baseTabControl3 = new exam_late_2012.BaseTabControl();
-            this.ClassTab = new System.Windows.Forms.TabPage();
-            this.baseTabControl4 = new exam_late_2012.BaseTabControl();
             this.tabControl1.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             this.PrticipantTab.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.CourseTab.SuspendLayout();
             this.ClassTab.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -74,7 +74,7 @@
             // 
             // EmployeeTab
             // 
-            this.EmployeeTab.Controls.Add(this.baseTabControl1);
+            this.EmployeeTab.Controls.Add(this.EmployeeControl);
             this.EmployeeTab.Location = new System.Drawing.Point(4, 22);
             this.EmployeeTab.Name = "EmployeeTab";
             this.EmployeeTab.Padding = new System.Windows.Forms.Padding(3);
@@ -83,9 +83,17 @@
             this.EmployeeTab.Text = "Medarbejdere";
             this.EmployeeTab.UseVisualStyleBackColor = true;
             // 
+            // EmployeeControl
+            // 
+            this.EmployeeControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeControl.Location = new System.Drawing.Point(3, 3);
+            this.EmployeeControl.Name = "EmployeeControl";
+            this.EmployeeControl.Size = new System.Drawing.Size(873, 462);
+            this.EmployeeControl.TabIndex = 0;
+            // 
             // PrticipantTab
             // 
-            this.PrticipantTab.Controls.Add(this.baseTabControl2);
+            this.PrticipantTab.Controls.Add(this.ParticipantControl);
             this.PrticipantTab.Location = new System.Drawing.Point(4, 22);
             this.PrticipantTab.Name = "PrticipantTab";
             this.PrticipantTab.Padding = new System.Windows.Forms.Padding(3);
@@ -93,6 +101,52 @@
             this.PrticipantTab.TabIndex = 1;
             this.PrticipantTab.Text = "Deltagere";
             this.PrticipantTab.UseVisualStyleBackColor = true;
+            // 
+            // ParticipantControl
+            // 
+            this.ParticipantControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ParticipantControl.Location = new System.Drawing.Point(3, 3);
+            this.ParticipantControl.Name = "ParticipantControl";
+            this.ParticipantControl.Size = new System.Drawing.Size(873, 462);
+            this.ParticipantControl.TabIndex = 0;
+            // 
+            // CourseTab
+            // 
+            this.CourseTab.Controls.Add(this.CourseControl);
+            this.CourseTab.Location = new System.Drawing.Point(4, 22);
+            this.CourseTab.Name = "CourseTab";
+            this.CourseTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CourseTab.Size = new System.Drawing.Size(879, 468);
+            this.CourseTab.TabIndex = 2;
+            this.CourseTab.Text = "Kurser";
+            this.CourseTab.UseVisualStyleBackColor = true;
+            // 
+            // CourseControl
+            // 
+            this.CourseControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CourseControl.Location = new System.Drawing.Point(3, 3);
+            this.CourseControl.Name = "CourseControl";
+            this.CourseControl.Size = new System.Drawing.Size(873, 462);
+            this.CourseControl.TabIndex = 0;
+            // 
+            // ClassTab
+            // 
+            this.ClassTab.Controls.Add(this.ClassControl);
+            this.ClassTab.Location = new System.Drawing.Point(4, 22);
+            this.ClassTab.Name = "ClassTab";
+            this.ClassTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ClassTab.Size = new System.Drawing.Size(879, 468);
+            this.ClassTab.TabIndex = 3;
+            this.ClassTab.Text = "Hold";
+            this.ClassTab.UseVisualStyleBackColor = true;
+            // 
+            // ClassControl
+            // 
+            this.ClassControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClassControl.Location = new System.Drawing.Point(3, 3);
+            this.ClassControl.Name = "ClassControl";
+            this.ClassControl.Size = new System.Drawing.Size(873, 462);
+            this.ClassControl.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -197,60 +251,6 @@
             this.hjælpToolStripMenuItem1.Size = new System.Drawing.Size(51, 20);
             this.hjælpToolStripMenuItem1.Text = "Hjælp";
             // 
-            // baseTabControl1
-            // 
-            this.baseTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseTabControl1.Location = new System.Drawing.Point(3, 3);
-            this.baseTabControl1.Name = "baseTabControl1";
-            this.baseTabControl1.Size = new System.Drawing.Size(873, 462);
-            this.baseTabControl1.TabIndex = 0;
-            // 
-            // baseTabControl2
-            // 
-            this.baseTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseTabControl2.Location = new System.Drawing.Point(3, 3);
-            this.baseTabControl2.Name = "baseTabControl2";
-            this.baseTabControl2.Size = new System.Drawing.Size(873, 462);
-            this.baseTabControl2.TabIndex = 0;
-            // 
-            // CourseTab
-            // 
-            this.CourseTab.Controls.Add(this.baseTabControl3);
-            this.CourseTab.Location = new System.Drawing.Point(4, 22);
-            this.CourseTab.Name = "CourseTab";
-            this.CourseTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CourseTab.Size = new System.Drawing.Size(879, 468);
-            this.CourseTab.TabIndex = 2;
-            this.CourseTab.Text = "Kurser";
-            this.CourseTab.UseVisualStyleBackColor = true;
-            // 
-            // baseTabControl3
-            // 
-            this.baseTabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseTabControl3.Location = new System.Drawing.Point(3, 3);
-            this.baseTabControl3.Name = "baseTabControl3";
-            this.baseTabControl3.Size = new System.Drawing.Size(873, 462);
-            this.baseTabControl3.TabIndex = 0;
-            // 
-            // ClassTab
-            // 
-            this.ClassTab.Controls.Add(this.baseTabControl4);
-            this.ClassTab.Location = new System.Drawing.Point(4, 22);
-            this.ClassTab.Name = "ClassTab";
-            this.ClassTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ClassTab.Size = new System.Drawing.Size(879, 468);
-            this.ClassTab.TabIndex = 3;
-            this.ClassTab.Text = "Hold";
-            this.ClassTab.UseVisualStyleBackColor = true;
-            // 
-            // baseTabControl4
-            // 
-            this.baseTabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseTabControl4.Location = new System.Drawing.Point(3, 3);
-            this.baseTabControl4.Name = "baseTabControl4";
-            this.baseTabControl4.Size = new System.Drawing.Size(873, 462);
-            this.baseTabControl4.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,13 +261,14 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.EmployeeTab.ResumeLayout(false);
             this.PrticipantTab.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.CourseTab.ResumeLayout(false);
             this.ClassTab.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,12 +293,12 @@
         private System.Windows.Forms.ToolStripMenuItem redigerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjælpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hjælpToolStripMenuItem1;
-        private BaseTabControl baseTabControl1;
-        private BaseTabControl baseTabControl2;
+        private BaseTabControl EmployeeControl;
+        private BaseTabControl ParticipantControl;
         private System.Windows.Forms.TabPage CourseTab;
-        private BaseTabControl baseTabControl3;
+        private BaseTabControl CourseControl;
         private System.Windows.Forms.TabPage ClassTab;
-        private BaseTabControl baseTabControl4;
+        private BaseTabControl ClassControl;
     }
 }
 

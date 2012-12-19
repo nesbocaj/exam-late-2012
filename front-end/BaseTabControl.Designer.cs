@@ -138,13 +138,14 @@
 
         #endregion
 
-        protected System.Windows.Forms.ListView listView;
-        protected System.Windows.Forms.Panel panel1;
-        protected System.Windows.Forms.Button DeleteButton;
-        protected System.Windows.Forms.Button EditButton;
-        protected System.Windows.Forms.Button AddButton;
-        protected System.Windows.Forms.Panel panel2;
-        protected System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.TextBox SearchBox;
+        public System.Windows.Forms.ListView listView;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button DeleteButton;
+        public System.Windows.Forms.Button EditButton;
+        public System.Windows.Forms.Button AddButton;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox SearchBox;
+
     }
 }

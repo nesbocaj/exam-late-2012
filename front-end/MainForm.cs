@@ -15,6 +15,22 @@ namespace exam_late_2012
         public MainForm()
         {
             InitializeComponent();
+            
+            EmployeeControl.AddButton.Click += AddEmployee_Click;
+
+        }
+
+        public void AddEmployee_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmp = new AddEmployee();
+
+            addEmp.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LogIn loginWindow = new LogIn();
+            loginWindow.ShowDialog();
         }
     }
 }
