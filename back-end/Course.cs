@@ -8,9 +8,13 @@ namespace back_end
 {
     public class Course : IModel
     {
+        private int _id;
+
+
+
         public int ID
         {
-            get { return 0;}
+            get { return _id;}
         }
 
         public void Update()

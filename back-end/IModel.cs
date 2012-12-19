@@ -11,6 +11,7 @@ namespace back_end
         int ID
         {
             get;
+            set;
         }
 
         void Update();
