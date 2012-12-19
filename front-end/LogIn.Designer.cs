@@ -110,7 +110,7 @@
             this.MinimumSize = new System.Drawing.Size(273, 143);
             this.Name = "LogIn";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "LogIn";
+            this.Text = "Log Ind";
             this.ResumeLayout(false);
             this.PerformLayout();
 
