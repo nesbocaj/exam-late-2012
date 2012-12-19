@@ -34,7 +34,8 @@ namespace back_end
 
         public int ID
         {
-            set { _id = Convert.ToInt32( "" + _invoiceId.ToString() + _personId.ToString()); } // concatenating the 2 numbers to get a common id, the "" is there to make sure it acts as a string
+            // concatenating the 2 numbers to get a common id, the "" is there to make sure it acts as a string rather than trying to play clever and skip it all by just adding
+            set { _id = Convert.ToInt32( "" + _invoiceId.ToString() + _personId.ToString()); } 
             get { return _id; }
         }
 
