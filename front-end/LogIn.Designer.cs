@@ -72,6 +72,7 @@
             this.CancelButton.TabIndex = 3;
             this.CancelButton.Text = "Annullér";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // label1
             // 
@@ -111,6 +112,7 @@
             this.Name = "LogIn";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Log Ind";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogIn_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

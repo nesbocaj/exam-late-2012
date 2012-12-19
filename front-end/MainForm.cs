@@ -37,7 +37,12 @@ namespace exam_late_2012
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LogIn loginWindow = new LogIn();
+            
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            LogIn loginWindow = new LogIn(this);
             loginWindow.ShowDialog();
         }
     }
