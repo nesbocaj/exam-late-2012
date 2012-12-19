@@ -28,68 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ParticipantNameText = new System.Windows.Forms.TextBox();
+            this.AddressText = new System.Windows.Forms.TextBox();
+            this.PostalText = new System.Windows.Forms.TextBox();
+            this.CityText = new System.Windows.Forms.TextBox();
+            this.PhoneText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ParticipantNumberText = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.CourseColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PriceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TotalText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // ParticipantNameText
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.ParticipantNameText.Location = new System.Drawing.Point(82, 45);
+            this.ParticipantNameText.Name = "ParticipantNameText";
+            this.ParticipantNameText.ReadOnly = true;
+            this.ParticipantNameText.Size = new System.Drawing.Size(100, 20);
+            this.ParticipantNameText.TabIndex = 3;
             // 
-            // textBox2
+            // AddressText
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.AddressText.Location = new System.Drawing.Point(82, 71);
+            this.AddressText.Name = "AddressText";
+            this.AddressText.ReadOnly = true;
+            this.AddressText.Size = new System.Drawing.Size(100, 20);
+            this.AddressText.TabIndex = 4;
             // 
-            // textBox3
+            // PostalText
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.PostalText.Location = new System.Drawing.Point(82, 97);
+            this.PostalText.Name = "PostalText";
+            this.PostalText.ReadOnly = true;
+            this.PostalText.Size = new System.Drawing.Size(100, 20);
+            this.PostalText.TabIndex = 5;
             // 
-            // textBox4
+            // CityText
             // 
-            this.textBox4.Location = new System.Drawing.Point(82, 123);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 6;
+            this.CityText.Location = new System.Drawing.Point(82, 123);
+            this.CityText.Name = "CityText";
+            this.CityText.ReadOnly = true;
+            this.CityText.Size = new System.Drawing.Size(100, 20);
+            this.CityText.TabIndex = 6;
             // 
-            // textBox5
+            // PhoneText
             // 
-            this.textBox5.Location = new System.Drawing.Point(82, 149);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 8;
+            this.PhoneText.Location = new System.Drawing.Point(82, 149);
+            this.PhoneText.Name = "PhoneText";
+            this.PhoneText.ReadOnly = true;
+            this.PhoneText.Size = new System.Drawing.Size(100, 20);
+            this.PhoneText.TabIndex = 8;
             // 
             // label1
             // 
@@ -138,17 +138,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.ParticipantNumberText);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.ParticipantNameText);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.AddressText);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.PostalText);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.CityText);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.PhoneText);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -156,6 +156,23 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personlige Detaljer";
+            // 
+            // ParticipantNumberText
+            // 
+            this.ParticipantNumberText.Location = new System.Drawing.Point(82, 19);
+            this.ParticipantNumberText.Name = "ParticipantNumberText";
+            this.ParticipantNumberText.ReadOnly = true;
+            this.ParticipantNumberText.Size = new System.Drawing.Size(100, 20);
+            this.ParticipantNumberText.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(2, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Kursistnr:";
             // 
             // groupBox2
             // 
@@ -166,23 +183,6 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kursusliste";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(286, 258);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(57, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(246, 261);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Total:";
             // 
             // listView1
             // 
@@ -207,22 +207,22 @@
             // 
             this.PriceColumn.Text = "Pris";
             // 
-            // textBox7
+            // TotalText
             // 
-            this.textBox7.Location = new System.Drawing.Point(82, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 14;
+            this.TotalText.Location = new System.Drawing.Point(286, 258);
+            this.TotalText.Name = "TotalText";
+            this.TotalText.ReadOnly = true;
+            this.TotalText.Size = new System.Drawing.Size(57, 20);
+            this.TotalText.TabIndex = 14;
             // 
-            // label7
+            // label6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Kursisnr:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(246, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Total:";
             // 
             // PrintParticipantInvoiceForm
             // 
@@ -230,7 +230,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 323);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.TotalText);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PrintParticipantInvoiceForm";
@@ -238,7 +238,7 @@
             this.Load += new System.EventHandler(this.PrintParticipantInvoiceForm_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
+            this.Controls.SetChildIndex(this.TotalText, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -250,11 +250,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ParticipantNameText;
+        private System.Windows.Forms.TextBox AddressText;
+        private System.Windows.Forms.TextBox PostalText;
+        private System.Windows.Forms.TextBox CityText;
+        private System.Windows.Forms.TextBox PhoneText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -262,12 +262,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TotalText;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader CourseColumn;
         private System.Windows.Forms.ColumnHeader PriceColumn;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox ParticipantNumberText;
         private System.Windows.Forms.Label label7;
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace exam_late_2012
 {
-    public partial class PrintParticipantInvoiceForm : BaseAddForm
+    public partial class PrintClassInvoiceForm : BaseAddForm
     {
-        public PrintParticipantInvoiceForm()
+        public PrintClassInvoiceForm()
         {
             InitializeComponent();
-        }
-
-        private void PrintParticipantInvoiceForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
