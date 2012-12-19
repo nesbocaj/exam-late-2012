@@ -22,7 +22,43 @@ namespace back_end
             set { _id = value; }
         }
 
-        public void Update()
+        public int SSN
+        {
+            get { return _ssn; }
+            set { _ssn = value; }
+        }
+
+        public int PostalCode
+        {
+            get { return _postal; }
+            set { _postal = value; }
+        }
+
+        public int HouseNumber
+        {
+            get { return _houseNumber; }
+            set { _houseNumber = value; }
+        }
+
+        public string FirstName
+        {
+            get { return _firstName; }
+            set { _firstName = value; }
+        }
+
+        public string LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
+        }
+
+        public string City
+        {
+            get { return _city; }
+            set { _city = value; }
+        }
+
+        public virtual void Update()
         {
 
         }

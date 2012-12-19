@@ -16,12 +16,6 @@ namespace back_end
 
         }
 
-        public int ID
-        {
-            set { _id = value; }
-            get { return _id; }
-        }
-
         public int Position
         {
             set { _position = value;}
@@ -46,7 +40,7 @@ namespace back_end
             get { return _accessword; }
         }
 
-        public void Update()
+        public override void Update()
         {
            //Skal være der som en del af interface
         }
