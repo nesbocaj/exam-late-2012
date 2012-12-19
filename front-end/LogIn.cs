@@ -17,6 +17,8 @@ namespace exam_late_2012
 
         private MainForm _parentWindow = null;
 
+        private bool _accessGranted = false;
+
         public LogIn(MainForm window)
         {
             _parentWindow = window;
@@ -27,14 +29,24 @@ namespace exam_late_2012
         {
             string username = UserBox.Text;
             byte[] hash = _security.ComputeHash(PasswordBox.Text, username, "Derp");
+
+            _accessGranted = true;
+            this.Close();
         }
 
         private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_parentWindow == null)
-                MessageBox.Show("Parent window not present", "Warning!");
+            if (_accessGranted == false)
+            {
+                if (_parentWindow == null)
+                    MessageBox.Show("Parent window not present", "Warning!");
+                else
+                    _parentWindow.Close();
+            }
             else
-                _parentWindow.Close();   
+            {
+                // do not close parent window
+            }
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
