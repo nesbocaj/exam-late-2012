@@ -22,10 +22,11 @@ namespace exam_late_2012
             if (id != null)
             {
                 OKButton.Click += SaveExisting;
-                this.Text.Replace("Opret", "Rediger");
+                this.Text = this.Text.Replace("Opret", "Rediger");
             }
             else
                 OKButton.Click += SaveNew;
+
             this.ShowDialog();
         }
 

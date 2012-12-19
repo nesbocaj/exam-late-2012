@@ -1,6 +1,6 @@
 ﻿namespace exam_late_2012
 {
-    partial class AddCourse
+    partial class AddCourseForm
     {
         /// <summary>
         /// Required designer variable.

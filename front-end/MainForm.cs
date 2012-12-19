@@ -23,16 +23,16 @@ namespace exam_late_2012
 
         public void AddEmployee_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmp = new AddEmployee();
+            AddEmployeeForm addEmp = new AddEmployeeForm();
 
-            addEmp.Show();
+            addEmp.ShowForm();
         }
 
         public void AddParticipant_Click(object sender, EventArgs e)
         {
-            AddParticipant addPar = new AddParticipant();
+            AddParticipantForm addPar = new AddParticipantForm();
 
-            addPar.Show();
+            addPar.ShowForm();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace exam_late_2012
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            LogIn loginWindow = new LogIn(this);
+            LoginForm loginWindow = new LoginForm(this);
             loginWindow.ShowDialog();
         }
     }

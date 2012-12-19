@@ -1,6 +1,6 @@
 ﻿namespace exam_late_2012
 {
-    partial class LogIn
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.

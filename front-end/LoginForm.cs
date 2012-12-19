@@ -11,7 +11,7 @@ using back_end;
 
 namespace exam_late_2012
 {
-    public partial class LogIn : Form
+    public partial class LoginForm : Form
     {
         private Security _security = Security.Instance;
 
@@ -19,7 +19,7 @@ namespace exam_late_2012
 
         private bool _accessGranted = false;
 
-        public LogIn(MainForm window)
+        public LoginForm(MainForm window)
         {
             _parentWindow = window;
             InitializeComponent();

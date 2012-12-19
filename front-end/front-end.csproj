@@ -45,29 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddClassWindow.cs">
+    <Compile Include="AddClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClassWindow.Designer.cs">
-      <DependentUpon>AddClassWindow.cs</DependentUpon>
+    <Compile Include="AddClassForm.Designer.cs">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCourse.cs">
+    <Compile Include="AddCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCourse.Designer.cs">
-      <DependentUpon>AddCourse.cs</DependentUpon>
+    <Compile Include="AddCourseForm.Designer.cs">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEmployee.cs">
+    <Compile Include="AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployee.Designer.cs">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddParticipant.cs">
+    <Compile Include="AddParticipantForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddParticipant.Designer.cs">
-      <DependentUpon>AddParticipant.cs</DependentUpon>
+    <Compile Include="AddParticipantForm.Designer.cs">
+      <DependentUpon>AddParticipantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseAddForm.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,11 @@
     <Compile Include="BaseTabControl.Designer.cs">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -113,17 +113,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddClassWindow.resx">
-      <DependentUpon>AddClassWindow.cs</DependentUpon>
+    <EmbeddedResource Include="AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCourse.resx">
-      <DependentUpon>AddCourse.cs</DependentUpon>
+    <EmbeddedResource Include="AddCourseForm.resx">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEmployee.resx">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddParticipant.resx">
-      <DependentUpon>AddParticipant.cs</DependentUpon>
+    <EmbeddedResource Include="AddParticipantForm.resx">
+      <DependentUpon>AddParticipantForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseAddForm.resx">
       <DependentUpon>BaseAddForm.cs</DependentUpon>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="BaseTabControl.resx">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
