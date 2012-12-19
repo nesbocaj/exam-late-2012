@@ -8,9 +8,9 @@ namespace back_end
 {
     public class ParticipantInvoiceLine : IModel
     {
-        private int _ParticipantId;
-        private int _CourseInvoiceId;
-        private int _CourseId;
+        private int _participantId;
+        private int _invoiceId;
+        private int _id;
         private int _personId;
         private double _subtotal;
 
@@ -20,25 +20,25 @@ namespace back_end
 
         }
 
-        public int ParticipantId
+        public int ParticipantID
         {
-            set { _ParticipantId = value; }
-            get { return _ParticipantId; }
+            set { _participantId = value; }
+            get { return _participantId; }
         }
 
-        public int CourseInvoiceId
+        public int CourseInvoiceID
         {
-            set { _CourseInvoiceId = value; }
-            get { return _CourseInvoiceId; }
+            set { _invoiceId = value; }
+            get { return _invoiceId; }
         }
 
         public int ID
         {
-            set { _CourseId = value; }
-            get { return _CourseId; }
+            set { _id = _invoiceId + _personId; }
+            get { return _id; }
         }
 
-        public double subtotal
+        public double Subtotal
         {
             set { _subtotal = value; }
             get { return _subtotal; }
