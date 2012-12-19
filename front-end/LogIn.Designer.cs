@@ -61,6 +61,7 @@
             this.AcceptButton.TabIndex = 2;
             this.AcceptButton.Text = "OK";
             this.AcceptButton.UseVisualStyleBackColor = true;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // CancelButton
             // 
