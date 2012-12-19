@@ -22,8 +22,8 @@ namespace exam_late_2012
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-
-            byte[] hash = _security.ComputeHash(PasswordBox.Text, UserBox.Text, "Derp");
+            string username = UserBox.Text;
+            byte[] hash = _security.ComputeHash(PasswordBox.Text, username, "Derp");
         }
     }
 }
