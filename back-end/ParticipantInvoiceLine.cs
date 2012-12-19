@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    class ParticipantInvoiceLine : Participant
+    public class ParticipantInvoiceLine : Participant
     {
         private int _ParticipantId;
         private int _CourseInvoiceId;

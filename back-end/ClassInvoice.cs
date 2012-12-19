@@ -40,7 +40,18 @@ namespace back_end
             get { return _paid; }
             set { _paid = value; }
         }
+        /*
+        public ParticipantInvoiceLine GetInvoiceLineAtIndex(int i)
+        {
+            return invoiceLine[i];
+        }
 
+        public void Add(ParticipantInvoiceLine tmp)
+        {
+            int id = (int)typeof(ParticipantInvoiceLine).GetProperty("ID").GetValue(tmp, null);
+            invoiceLine.Add(id, tmp);
+        }
+        */
         public void Update()
         {
 

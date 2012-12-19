@@ -10,7 +10,7 @@ namespace back_end
     {
         private int _id, _personId;
         private double _total, _paid;
-        //private Dictionary<int, ParticipantInvoiceLine> invoiceLine;
+        private Dictionary<int, ParticipantInvoiceLine> _invoiceLine;
 
         public ParticipantInvoice()
         {
@@ -39,6 +39,17 @@ namespace back_end
         {
             get { return _paid; }
             set { _paid = value; }
+        }
+
+        public ParticipantInvoiceLine GetInvoiceLineAtIndex(int i)
+        {
+            return _invoiceLine[i];
+        }
+
+        public void Add(ParticipantInvoiceLine tmp)
+        {
+            int id = (int)typeof(ParticipantInvoiceLine).GetProperty("ID").GetValue(tmp, null);
+            _invoiceLine.Add(id, tmp);
         }
 
         public void Update()
