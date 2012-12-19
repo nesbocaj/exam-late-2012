@@ -36,13 +36,15 @@ namespace exam_late_2012
 
         private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_accessGranted == false)
+            // if access granted is false, it'll close the MainForm window behind it
+            if (_accessGranted == false) 
             {
                 if (_parentWindow == null)
                     MessageBox.Show("Parent window not present", "Warning!");
                 else
                     _parentWindow.Close();
             }
+
             else
             {
                 // do not close parent window
