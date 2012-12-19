@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,8 @@ namespace datalayer
 {
     class DatabaseCommand
     {
-        private MySqlCommand command;
-        private string commandString;
+        private MySqlCommand _command;
+        private string _commandStr;
 
         private DatabaseCommand()
         {
@@ -26,8 +27,8 @@ namespace datalayer
 
         public DatabaseCommand Insert(object value, string field, string table)
         {
-            commandString = "INSERT INTO " + table + "(" + field + ") VALUES (@value)";
-            command.Parameters.AddWithValue("@value", value);
+            _commandStr = "INSERT INTO " + table + "(" + field + ") VALUES (@value)";
+            _command.Parameters.AddWithValue("@value", value);
 
             return this;
         }
@@ -36,31 +37,31 @@ namespace datalayer
         {
             int i = 0;
 
-            commandString = "INSERT INTO " + table + "(";
+            _commandStr = "INSERT INTO " + table + "(";
 
             foreach (var field in fields)
             {
-                commandString += field + ", ";
+                _commandStr += field + ", ";
             }
 
-            commandString += "VALUES (";
+            _commandStr += "VALUES (";
 
             foreach (var value in values)
             {
-                commandString += "@value" + i + ", ";
-                command.Parameters.AddWithValue("@value" + i, value.ToString());
+                _commandStr += "@value" + i + ", ";
+                _command.Parameters.AddWithValue("@value" + i, value.ToString());
 
                 i++;
             }
 
-            commandString += ")";
+            _commandStr += ")";
 
             return this;
         }
 
         public DatabaseCommand Select(string field, string table)
         {
-            commandString = "SELECT " + field + " FROM " + table;
+            _commandStr = "SELECT " + field + " FROM " + table;
 
             return this;
         }
@@ -72,12 +73,12 @@ namespace datalayer
         /// <param name="table" type="string"></param>
         public DatabaseCommand Select(Array fields, string table)
         {
-            commandString = "SELECT ";
+            _commandStr = "SELECT ";
 
             foreach (var field in fields)
-                commandString += field + ", ";
+                _commandStr += field + ", ";
 
-            commandString += "FROM " + table;
+            _commandStr += "FROM " + table;
 
             return this;
         }
@@ -88,15 +89,15 @@ namespace datalayer
         /// <param name="table" type="string"></param>
         public DatabaseCommand Select(string table)
         {
-            commandString = "SELECT * FROM " + table;
+            _commandStr = "SELECT * FROM " + table;
 
             return this;
         }
 
         public DatabaseCommand Update(string field, object value, string table)
         {
-            commandString = "UPDATE " + table + " SET " + field + " = @value";
-            command.Parameters.AddWithValue("@value", value.ToString());
+            _commandStr = "UPDATE " + table + " SET " + field + " = @value";
+            _command.Parameters.AddWithValue("@value", value.ToString());
 
             return this;
         }
@@ -105,17 +106,17 @@ namespace datalayer
         {
             int i = 0;
 
-            commandString = "UPDATE " + table + " SET ";
+            _commandStr = "UPDATE " + table + " SET ";
 
             foreach (var field in fields)
-                commandString += field + ", ";
+                _commandStr += field + ", ";
 
-            commandString += " = ";
+            _commandStr += " = ";
 
             foreach (var value in values)
             {
-                commandString += "@value" + i + ", ";
-                command.Parameters.AddWithValue("@value" + i, value.ToString());
+                _commandStr += "@value" + i + ", ";
+                _command.Parameters.AddWithValue("@value" + i, value.ToString());
 
                 i++;
             }
@@ -125,26 +126,26 @@ namespace datalayer
 
         public DatabaseCommand Delete(string field, string table)
         {
-            commandString = "DELETE " + field + " FROM " + table;
+            _commandStr = "DELETE " + field + " FROM " + table;
 
             return this;
         }
 
         public DatabaseCommand Delete(Array fields, string table)
         {
-            commandString = "DELETE ";
+            _commandStr = "DELETE ";
 
             foreach (var field in fields)
-                commandString += field + ", ";
+                _commandStr += field + ", ";
 
-            commandString += "FROM " + table;
+            _commandStr += "FROM " + table;
 
             return this;
         }
 
         public DatabaseCommand Delete(string table)
         {
-            commandString = "DELETE * FROM " + table;
+            _commandStr = "DELETE * FROM " + table;
 
             return this;
         }
@@ -153,47 +154,47 @@ namespace datalayer
         {
             int i = 2;
 
-            while (commandString.Contains("value" + i))
+            while (_commandStr.Contains("value" + i))
                 i++;
 
             if (!value.GetType().Equals(typeof(string)))
-                commandString += " WHERE " + field + " " + operatorStr.ToUpper() + " CONVERT(NVARCHAR(30), @value" + i + ")";
+                _commandStr += " WHERE " + field + " " + operatorStr.ToUpper() + " CONVERT(NVARCHAR(30), @value" + i + ")";
             else
-                commandString += " WHERE " + field + " " + operatorStr.ToUpper() + " @value" + i;
+                _commandStr += " WHERE " + field + " " + operatorStr.ToUpper() + " @value" + i;
 
-            command.Parameters.AddWithValue("@value" + i, value.ToString());
+            _command.Parameters.AddWithValue("@value" + i, value.ToString());
 
             return this;
         }
 
         public DatabaseCommand And(string field, object value, string operatorStr)
         {
-            commandString += " AND";
+            _commandStr += " AND";
 
             return this;
         }
 
         public DatabaseCommand Or(string field, object value, string operatorStr)
         {
-            commandString += " OR";
+            _commandStr += " OR";
 
             return this;
         }
 
         public DatabaseCommand Custom(string query, object value, string parameter)
         {
-            commandString += query;
-            command.Parameters.AddWithValue(parameter, value.ToString());
+            _commandStr += query;
+            _command.Parameters.AddWithValue(parameter, value.ToString());
 
             return this;
         }
 
         public DatabaseCommand Custom(string query, Array values, Array parameters)
         {
-            commandString += query;
+            _commandStr += query;
 
             for (int i = 0; i < parameters.Length; i++)
-                command.Parameters.AddWithValue(parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
+                _command.Parameters.AddWithValue(parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
 
             return this;
         }
@@ -203,22 +204,54 @@ namespace datalayer
             int i = 0;
             int j = i++;
 
-            while (commandString.Contains("t" + i))
+            while (_commandStr.Contains("t" + i))
                 i++;
 
-            commandString += " t" + i + " JOIN " + table2 + " t" + j + " ON t" + i + "." + table2Field + " = t" + j + "." + table1Field; ;
+            _commandStr += " t" + i + " JOIN " + table2 + " t" + j + " ON t" + i + "." + table2Field + " = t" + j + "." + table1Field; ;
 
             return this;
         }
 
         public void Execute()
         {
+            try
+            {
+                if (DatabaseConnection.Instance.Open())
+                {
+                    _command = new MySqlCommand(_commandStr);
+                    _command.ExecuteNonQuery();
+                    DatabaseConnection.Instance.Close();
+                }
+            }
 
+            catch (MySqlException me) { Debug.WriteLine("DatabaseCommand: {0}", me); }
         }
 
         public DataTable ExecuteAndReturn()
         {
-            return null;
+            try
+            {
+                if (DatabaseConnection.Instance.Open())
+                {
+                    _command = new MySqlCommand(_commandStr);
+                    MySqlDataReader datareader = _command.ExecuteReader();
+
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(datareader);
+
+                    DatabaseConnection.Instance.Close();
+
+                    return dataTable;
+                }
+                else
+                    return null;
+            }
+
+            catch (MySqlException me)
+            {
+                Debug.WriteLine("DatabaseCommand: {0}", me);
+                return null;
+            }
         }
     }
 }
