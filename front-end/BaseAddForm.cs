@@ -17,7 +17,7 @@ namespace exam_late_2012
             InitializeComponent();
         }
 
-        public void Show(int? id = null)
+        public void ShowForm(int? id = null)
         {
             if (id != null)
             {
@@ -26,7 +26,7 @@ namespace exam_late_2012
             }
             else
                 OKButton.Click += SaveNew;
-            this.Show();
+            this.ShowDialog();
         }
 
         protected virtual void SaveExisting(object sender, EventArgs e)
