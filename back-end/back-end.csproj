@@ -41,8 +41,6 @@
   <ItemGroup>
     <Compile Include="Catalog.cs" />
     <Compile Include="CatalogFactory.cs" />
-    <Compile Include="Class.cs" />
-    <Compile Include="Course.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FluentFactory.cs" />
     <Compile Include="IModel.cs" />
