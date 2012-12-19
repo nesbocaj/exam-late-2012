@@ -49,11 +49,12 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(386, 3);
+            this.CancelButton.Location = new System.Drawing.Point(656, 3);
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(467, 3);
+            this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.OKButton.Location = new System.Drawing.Point(737, 3);
             // 
             // panel1
             // 
@@ -78,7 +79,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.25414F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 164F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 341);
-            this.tableLayoutPanel1.TabIndex = 20;
+            this.tableLayoutPanel1.TabIndex = 21;
             // 
             // basePersonControl1
             // 
@@ -235,6 +236,7 @@
         private System.Windows.Forms.TextBox WorkConditionText;
         private BaseAdressControl baseAdressControl1;
         private BaseConstactControl baseConstactControl1;
+
 
     }
 }

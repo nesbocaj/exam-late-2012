@@ -17,6 +17,7 @@ namespace exam_late_2012
             InitializeComponent();
             
             EmployeeControl.AddButton.Click += AddEmployee_Click;
+            ParticipantControl.AddButton.Click += AddParticipant_Click;
 
         }
 
@@ -25,6 +26,13 @@ namespace exam_late_2012
             AddEmployee addEmp = new AddEmployee();
 
             addEmp.Show();
+        }
+
+        public void AddParticipant_Click(object sender, EventArgs e)
+        {
+            AddParticipant addPar = new AddParticipant();
+
+            addPar.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

@@ -12,5 +12,7 @@ namespace back_end
         {
             get;
         }
+
+        void Update();
     }
 }
