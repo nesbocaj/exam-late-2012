@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace exam_late_2012
 {
-    public partial class AddClassWindow : Form
+    public partial class AddClassWindow : BaseAddForm
     {
         public AddClassWindow()
         {

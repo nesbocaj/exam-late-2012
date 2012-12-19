@@ -208,7 +208,7 @@
             this.ClientSize = new System.Drawing.Size(445, 397);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "AddEmployee";
-            this.Text = "AddEmployee";
+            this.Text = "Opret Medarbejder";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
