@@ -10,10 +10,14 @@ namespace back_end
     {
         private int _id;
 
-
+        public Course()
+        {
+            
+        }
 
         public int ID
         {
+            set { _id = value; }
             get { return _id;}
         }
 
