@@ -100,14 +100,13 @@
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HourReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HourReportForm.Designer.cs">
       <DependentUpon>HourReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LogIn.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -149,11 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HourReportForm.resx">
       <DependentUpon>HourReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

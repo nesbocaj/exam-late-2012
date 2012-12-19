@@ -38,7 +38,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 36);
+            this.textBox1.Location = new System.Drawing.Point(145, 54);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(43, 20);
             this.textBox1.TabIndex = 3;
@@ -46,7 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 39);
+            this.label1.Location = new System.Drawing.Point(106, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 4;
@@ -55,15 +55,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Location = new System.Drawing.Point(17, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(122, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Arbejdede Timer:";
+            this.label2.Text = "Samlede Arbejdet Timer:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 62);
+            this.textBox2.Location = new System.Drawing.Point(145, 80);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(43, 20);
@@ -78,7 +78,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(162, 140);
+            this.groupBox1.Size = new System.Drawing.Size(200, 178);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbejdstimer";
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(162, 140);
+            this.ClientSize = new System.Drawing.Size(200, 178);
             this.Controls.Add(this.groupBox1);
             this.Name = "HourReportForm";
             this.Text = "Indberetning";
