@@ -18,8 +18,9 @@ namespace datalayer
         private DatabaseConnection()
         {
             _connectionStrBuilder = new MySqlConnectionStringBuilder();
-            _connectionStrBuilder.Server = "127.0.0.1";
-            _connectionStrBuilder.UserID = "exam-2012";
+            _connectionStrBuilder.Server   = "localhost";
+            _connectionStrBuilder.Port     = 3306;
+            _connectionStrBuilder.UserID   = "exam-2012";
             _connectionStrBuilder.Password = "2012";
             _connectionStrBuilder.Database = "exam-2012";
 
