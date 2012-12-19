@@ -12,13 +12,16 @@ namespace datalayer
 {
     class DatabaseCommand
     {
+        private DatabaseConnection _connection;
         private MySqlCommand _command;
         private string _commandStr;
 
         private DatabaseCommand()
         {
+            _connection = DatabaseConnection.Instance;
+
             _command = new MySqlCommand();
-            _command.Connection = DatabaseConnection.Instance.MySql;
+            _command.Connection = _connection.MySql;
         }
 
         public static DatabaseCommand Init()
