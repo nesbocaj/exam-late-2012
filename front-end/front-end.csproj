@@ -99,6 +99,12 @@
     <Compile Include="BaseTabControl.Designer.cs">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintClassInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintClassInvoiceForm.Designer.cs">
+      <DependentUpon>PrintClassInvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseTabControl.resx">
       <DependentUpon>BaseTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintClassInvoiceForm.resx">
+      <DependentUpon>PrintClassInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
