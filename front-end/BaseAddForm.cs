@@ -15,6 +15,7 @@ namespace exam_late_2012
         public BaseAddForm()
         {
             InitializeComponent();
+            this.CancelButton.Click += Cancel_Click;
         }
 
         public void ShowForm(int? id = null)
@@ -32,12 +33,17 @@ namespace exam_late_2012
 
         protected virtual void SaveExisting(object sender, EventArgs e)
         {
-
+            
         }
 
         protected virtual void SaveNew(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        public void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

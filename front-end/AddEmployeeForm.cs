@@ -15,6 +15,20 @@ namespace exam_late_2012
         public AddEmployeeForm()
         {
             InitializeComponent();
+            /*
+            OKButton.Click += OK_Click;
+            CancelButton.Click += Cancel_Click;
+            */
+        }
+
+        protected virtual void SaveExisting(object sender, EventArgs e)
+        {
+
+        }
+
+        protected virtual void SaveNew(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

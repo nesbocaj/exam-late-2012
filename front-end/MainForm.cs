@@ -18,7 +18,8 @@ namespace exam_late_2012
             
             EmployeeControl.AddButton.Click += AddEmployee_Click;
             ParticipantControl.AddButton.Click += AddParticipant_Click;
-
+            CourseControl.AddButton.Click += AddCourse_Click;
+            ClassControl.AddButton.Click += AddClass_Click;
         }
 
         public void AddEmployee_Click(object sender, EventArgs e)
@@ -33,6 +34,18 @@ namespace exam_late_2012
             AddParticipantForm addPar = new AddParticipantForm();
 
             addPar.ShowForm();
+        }
+
+        public void AddCourse_Click(object sender, EventArgs e)
+        {
+            AddCourseForm addCou = new AddCourseForm();
+            addCou.ShowForm();
+        }
+
+        public void AddClass_Click(object sender, EventArgs e)
+        {
+            AddClassForm addCla = new AddClassForm();
+            addCla.ShowForm();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
