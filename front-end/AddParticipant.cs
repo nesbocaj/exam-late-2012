@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace exam_late_2012
 {
-    public partial class AddParticipant : Form
+    public partial class AddParticipant : BaseAddForm
     {
         public AddParticipant()
         {
