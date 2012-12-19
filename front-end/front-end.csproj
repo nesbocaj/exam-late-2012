@@ -100,7 +100,7 @@
       <DependentUpon>BaseTabControl.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HourReportForm.cs">
       <SubType>Form</SubType>
