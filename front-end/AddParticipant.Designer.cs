@@ -41,10 +41,27 @@
             this.WorkConditionText = new System.Windows.Forms.TextBox();
             this.baseAdressControl1 = new exam_late_2012.BaseAdressControl();
             this.baseConstactControl1 = new exam_late_2012.BaseConstactControl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PassedCourseCheck = new System.Windows.Forms.CheckedListBox();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.WorkConditionBox.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(386, 3);
+            // 
+            // OKButton
+            // 
+            this.OKButton.Location = new System.Drawing.Point(467, 3);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 421);
+            this.panel1.Size = new System.Drawing.Size(554, 30);
             // 
             // tableLayoutPanel1
             // 
@@ -52,18 +69,20 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.basePersonControl1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.WorkConditionBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.baseAdressControl1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.baseConstactControl1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.baseConstactControl1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.74586F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.25414F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 164F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 342);
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.87898F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.12102F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 421);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // basePersonControl1
@@ -71,7 +90,7 @@
             this.basePersonControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.basePersonControl1.Location = new System.Drawing.Point(3, 3);
             this.basePersonControl1.Name = "basePersonControl1";
-            this.basePersonControl1.Size = new System.Drawing.Size(271, 111);
+            this.basePersonControl1.Size = new System.Drawing.Size(271, 99);
             this.basePersonControl1.TabIndex = 16;
             // 
             // groupBox1
@@ -83,10 +102,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.ChosenList);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(280, 120);
+            this.groupBox1.Location = new System.Drawing.Point(280, 160);
             this.groupBox1.Name = "groupBox1";
             this.tableLayoutPanel1.SetRowSpan(this.groupBox1, 2);
-            this.groupBox1.Size = new System.Drawing.Size(271, 219);
+            this.groupBox1.Size = new System.Drawing.Size(271, 258);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kursus Valg";
@@ -119,7 +138,7 @@
             this.AvailableList.FormattingEnabled = true;
             this.AvailableList.Location = new System.Drawing.Point(10, 32);
             this.AvailableList.Name = "AvailableList";
-            this.AvailableList.Size = new System.Drawing.Size(100, 160);
+            this.AvailableList.Size = new System.Drawing.Size(100, 212);
             this.AvailableList.TabIndex = 15;
             // 
             // label1
@@ -148,16 +167,16 @@
             this.ChosenList.FormattingEnabled = true;
             this.ChosenList.Location = new System.Drawing.Point(165, 32);
             this.ChosenList.Name = "ChosenList";
-            this.ChosenList.Size = new System.Drawing.Size(100, 160);
+            this.ChosenList.Size = new System.Drawing.Size(100, 212);
             this.ChosenList.TabIndex = 10;
             // 
             // WorkConditionBox
             // 
             this.WorkConditionBox.Controls.Add(this.WorkConditionText);
             this.WorkConditionBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WorkConditionBox.Location = new System.Drawing.Point(3, 120);
+            this.WorkConditionBox.Location = new System.Drawing.Point(3, 108);
             this.WorkConditionBox.Name = "WorkConditionBox";
-            this.WorkConditionBox.Size = new System.Drawing.Size(271, 54);
+            this.WorkConditionBox.Size = new System.Drawing.Size(271, 46);
             this.WorkConditionBox.TabIndex = 18;
             this.WorkConditionBox.TabStop = false;
             this.WorkConditionBox.Text = "Arbejdstilstand";
@@ -173,34 +192,58 @@
             // baseAdressControl1
             // 
             this.baseAdressControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseAdressControl1.Location = new System.Drawing.Point(3, 180);
+            this.baseAdressControl1.Location = new System.Drawing.Point(3, 160);
             this.baseAdressControl1.Name = "baseAdressControl1";
-            this.baseAdressControl1.Size = new System.Drawing.Size(271, 159);
+            this.baseAdressControl1.Size = new System.Drawing.Size(271, 152);
             this.baseAdressControl1.TabIndex = 14;
             // 
             // baseConstactControl1
             // 
             this.baseConstactControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.baseConstactControl1.Location = new System.Drawing.Point(280, 3);
+            this.baseConstactControl1.Location = new System.Drawing.Point(3, 318);
             this.baseConstactControl1.Name = "baseConstactControl1";
-            this.baseConstactControl1.Size = new System.Drawing.Size(271, 111);
+            this.baseConstactControl1.Size = new System.Drawing.Size(271, 100);
             this.baseConstactControl1.TabIndex = 15;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.PassedCourseCheck);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(280, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.tableLayoutPanel1.SetRowSpan(this.groupBox2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(271, 151);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Bestået Fag";
+            // 
+            // PassedCourseCheck
+            // 
+            this.PassedCourseCheck.FormattingEnabled = true;
+            this.PassedCourseCheck.Location = new System.Drawing.Point(124, 19);
+            this.PassedCourseCheck.Name = "PassedCourseCheck";
+            this.PassedCourseCheck.ScrollAlwaysVisible = true;
+            this.PassedCourseCheck.Size = new System.Drawing.Size(141, 124);
+            this.PassedCourseCheck.TabIndex = 0;
             // 
             // AddParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 371);
+            this.ClientSize = new System.Drawing.Size(554, 451);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(570, 410);
             this.Name = "AddParticipant";
             this.Text = "Opret Deltager";
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.WorkConditionBox.ResumeLayout(false);
             this.WorkConditionBox.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -220,6 +263,8 @@
         private System.Windows.Forms.TextBox WorkConditionText;
         private BaseAdressControl baseAdressControl1;
         private BaseConstactControl baseConstactControl1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckedListBox PassedCourseCheck;
 
 
     }
