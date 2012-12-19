@@ -43,8 +43,8 @@
             this.CourseBox = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.CourseReqCheck = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MarkAllButton = new System.Windows.Forms.Button();
             this.UnmarkAllButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -173,7 +173,7 @@
             this.CourseBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CourseBox.Location = new System.Drawing.Point(3, 3);
             this.CourseBox.Name = "CourseBox";
-            this.CourseBox.Size = new System.Drawing.Size(251, 131);
+            this.CourseBox.Size = new System.Drawing.Size(251, 132);
             this.CourseBox.TabIndex = 13;
             this.CourseBox.TabStop = false;
             this.CourseBox.Text = "Kursus Detaljer";
@@ -196,12 +196,20 @@
             this.groupBox2.Controls.Add(this.MarkAllButton);
             this.groupBox2.Controls.Add(this.CourseReqCheck);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 140);
+            this.groupBox2.Location = new System.Drawing.Point(3, 141);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 180);
+            this.groupBox2.Size = new System.Drawing.Size(251, 179);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kravspecification";
+            // 
+            // CourseReqCheck
+            // 
+            this.CourseReqCheck.FormattingEnabled = true;
+            this.CourseReqCheck.Location = new System.Drawing.Point(122, 19);
+            this.CourseReqCheck.Name = "CourseReqCheck";
+            this.CourseReqCheck.Size = new System.Drawing.Size(123, 154);
+            this.CourseReqCheck.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -219,14 +227,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.27554F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 323);
             this.tableLayoutPanel1.TabIndex = 19;
-            // 
-            // CourseReqCheck
-            // 
-            this.CourseReqCheck.FormattingEnabled = true;
-            this.CourseReqCheck.Location = new System.Drawing.Point(122, 19);
-            this.CourseReqCheck.Name = "CourseReqCheck";
-            this.CourseReqCheck.Size = new System.Drawing.Size(123, 154);
-            this.CourseReqCheck.TabIndex = 0;
             // 
             // MarkAllButton
             // 
@@ -283,8 +283,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckedListBox CourseReqCheck;
         private System.Windows.Forms.Button UnmarkAllButton;
         private System.Windows.Forms.Button MarkAllButton;
-        private System.Windows.Forms.CheckedListBox CourseReqCheck;
     }
 }
