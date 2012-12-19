@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace datalayer
 {
-    class DatabaseCommand<T> where T : System.Data.Common.DbCommand
+    class DatabaseCommand
     {
-        private T command;
+        private MySqlCommand command;
         private string commandString;
 
         private DatabaseCommand()
@@ -19,28 +19,20 @@ namespace datalayer
 
         }
 
-        private void AddWithValue(string parameterName, object value)
+        public static DatabaseCommand Init()
         {
-            DbParameter commandParameter = (DbParameter)Activator.CreateInstance(typeof(DbParameter));
-            commandParameter.ParameterName = "@" + parameterName;
-            commandParameter.Value = value;
-            command.Parameters.Add(commandParameter);
+            return new DatabaseCommand();
         }
 
-        public static DatabaseCommand<T> Init()
-        {
-            return new DatabaseCommand<T>();
-        }
-
-        public DatabaseCommand<T> Insert(object value, string field, string table)
+        public DatabaseCommand Insert(object value, string field, string table)
         {
             commandString = "INSERT INTO " + table + "(" + field + ") VALUES (@value)";
-            AddWithValue("value", value);
+            command.Parameters.AddWithValue("@value", value);
 
             return this;
         }
 
-        public DatabaseCommand<T> Insert(Array values, Array fields, string table)
+        public DatabaseCommand Insert(Array values, Array fields, string table)
         {
             int i = 0;
 
@@ -56,7 +48,7 @@ namespace datalayer
             foreach (var value in values)
             {
                 commandString += "@value" + i + ", ";
-                AddWithValue("value" + i, value.ToString());
+                command.Parameters.AddWithValue("@value" + i, value.ToString());
 
                 i++;
             }
@@ -66,7 +58,7 @@ namespace datalayer
             return this;
         }
 
-        public DatabaseCommand<T> Select(string field, string table)
+        public DatabaseCommand Select(string field, string table)
         {
             commandString = "SELECT " + field + " FROM " + table;
 
@@ -78,7 +70,7 @@ namespace datalayer
         /// </summary>
         /// <param name="fields" type="object">Can be a variable or an array</param>
         /// <param name="table" type="string"></param>
-        public DatabaseCommand<T> Select(Array fields, string table)
+        public DatabaseCommand Select(Array fields, string table)
         {
             commandString = "SELECT ";
 
@@ -94,22 +86,22 @@ namespace datalayer
         /// Adds select query for all fields to the variable commandString
         /// </summary>
         /// <param name="table" type="string"></param>
-        public DatabaseCommand<T> Select(string table)
+        public DatabaseCommand Select(string table)
         {
             commandString = "SELECT * FROM " + table;
 
             return this;
         }
 
-        public DatabaseCommand<T> Update(string field, object value, string table)
+        public DatabaseCommand Update(string field, object value, string table)
         {
             commandString = "UPDATE " + table + " SET " + field + " = @value";
-            AddWithValue("value", value.ToString());
+            command.Parameters.AddWithValue("@value", value.ToString());
 
             return this;
         }
 
-        public DatabaseCommand<T> Update(Array fields, Array values, string table)
+        public DatabaseCommand Update(Array fields, Array values, string table)
         {
             int i = 0;
 
@@ -123,7 +115,7 @@ namespace datalayer
             foreach (var value in values)
             {
                 commandString += "@value" + i + ", ";
-                AddWithValue("value" + i, value.ToString());
+                command.Parameters.AddWithValue("@value" + i, value.ToString());
 
                 i++;
             }
@@ -131,14 +123,14 @@ namespace datalayer
             return this;
         }
 
-        public DatabaseCommand<T> Delete(string field, string table)
+        public DatabaseCommand Delete(string field, string table)
         {
             commandString = "DELETE " + field + " FROM " + table;
 
             return this;
         }
 
-        public DatabaseCommand<T> Delete(Array fields, string table)
+        public DatabaseCommand Delete(Array fields, string table)
         {
             commandString = "DELETE ";
 
@@ -150,14 +142,14 @@ namespace datalayer
             return this;
         }
 
-        public DatabaseCommand<T> Delete(string table)
+        public DatabaseCommand Delete(string table)
         {
             commandString = "DELETE * FROM " + table;
 
             return this;
         }
 
-        public DatabaseCommand<T> Where(string field, string operatorStr, object value)
+        public DatabaseCommand Where(string field, string operatorStr, object value)
         {
             int i = 2;
 
@@ -169,44 +161,44 @@ namespace datalayer
             else
                 commandString += " WHERE " + field + " " + operatorStr.ToUpper() + " @value" + i;
 
-            AddWithValue("value" + i, value.ToString());
+            command.Parameters.AddWithValue("@value" + i, value.ToString());
 
             return this;
         }
 
-        public DatabaseCommand<T> And(string field, object value, string operatorStr)
+        public DatabaseCommand And(string field, object value, string operatorStr)
         {
             commandString += " AND";
 
             return this;
         }
 
-        public DatabaseCommand<T> Or(string field, object value, string operatorStr)
+        public DatabaseCommand Or(string field, object value, string operatorStr)
         {
             commandString += " OR";
 
             return this;
         }
 
-        public DatabaseCommand<T> Custom(string query, object value, string parameter)
+        public DatabaseCommand Custom(string query, object value, string parameter)
         {
             commandString += query;
-            AddWithValue(parameter, value.ToString());
+            command.Parameters.AddWithValue(parameter, value.ToString());
 
             return this;
         }
 
-        public DatabaseCommand<T> Custom(string query, Array values, Array parameters)
+        public DatabaseCommand Custom(string query, Array values, Array parameters)
         {
             commandString += query;
 
             for (int i = 0; i < parameters.Length; i++)
-                AddWithValue(parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
+                command.Parameters.AddWithValue(parameters.GetValue(i).ToString(), values.GetValue(i).ToString());
 
             return this;
         }
 
-        public DatabaseCommand<T> Join(string table2, string table1Field, string table2Field)
+        public DatabaseCommand Join(string table2, string table1Field, string table2Field)
         {
             int i = 0;
             int j = i++;
