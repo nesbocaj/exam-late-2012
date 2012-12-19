@@ -41,7 +41,6 @@
             this.WorkConditionText = new System.Windows.Forms.TextBox();
             this.baseAdressControl1 = new exam_late_2012.BaseAdressControl();
             this.baseConstactControl1 = new exam_late_2012.BaseConstactControl();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.WorkConditionBox.SuspendLayout();
@@ -49,17 +48,11 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(656, 3);
+            this.CancelButton.Location = new System.Drawing.Point(389, 3);
             // 
             // OKButton
             // 
-            this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.OKButton.Location = new System.Drawing.Point(737, 3);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 341);
-            this.panel1.Size = new System.Drawing.Size(554, 30);
+            this.OKButton.Location = new System.Drawing.Point(470, 3);
             // 
             // tableLayoutPanel1
             // 
@@ -110,7 +103,7 @@
             // 
             this.RemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RemoveButton.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.RemoveButton.Location = new System.Drawing.Point(122, 92);
+            this.RemoveButton.Location = new System.Drawing.Point(124, 92);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(27, 27);
             this.RemoveButton.TabIndex = 17;
@@ -121,7 +114,7 @@
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddButton.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.AddButton.Location = new System.Drawing.Point(122, 59);
+            this.AddButton.Location = new System.Drawing.Point(124, 59);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(27, 27);
             this.AddButton.TabIndex = 16;
@@ -141,7 +134,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 16);
+            this.label1.Location = new System.Drawing.Point(162, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 14;
@@ -161,7 +154,7 @@
             // 
             this.ChosenList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChosenList.FormattingEnabled = true;
-            this.ChosenList.Location = new System.Drawing.Point(162, 32);
+            this.ChosenList.Location = new System.Drawing.Point(165, 32);
             this.ChosenList.Name = "ChosenList";
             this.ChosenList.Size = new System.Drawing.Size(100, 160);
             this.ChosenList.TabIndex = 10;
@@ -209,9 +202,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddParticipant";
             this.Text = "Opret Deltager";
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
