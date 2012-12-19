@@ -41,7 +41,7 @@ namespace back_end
             get { return _courseName; }
         }
 
-        public void Upadte()
+        public void Update()
         {
 
         }
