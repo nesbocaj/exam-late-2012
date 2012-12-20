@@ -8,37 +8,39 @@ namespace back_end
 {
     public class Class : IModel
     {
-        private int _classId, _classRoomId, _personId, _courseId;
-        private string _courseName;
+        private uint _id, _roomId;
+        private string _name;
+        private Course _course;
+        private Tutor _tutor;
 
-        public int ID
+        public uint ID
         {
-            set { _classId = value; }
-            get { return _classId; }
+            set { _id = value; }
+            get { return _id; }
         }
 
-        public int RoomID
+        public string Name
         {
-            set { _classRoomId = value; }
-            get { return _classRoomId; }
+            set { _name = value; }
+            get { return _name; }
         }
 
-        public int PersonID
+        public uint RoomID
         {
-            set { _personId = value; }
-            get { return _personId; }
+            set { _roomId = value; }
+            get { return _roomId; }
         }
 
-        public int CourseID
+        public Course Course
         {
-            set { _courseId = value; }
-            get { return _courseId; }
+            get { return _course; }
+            set { _course = value; }
         }
 
-        public string CourseName
+        public Tutor Tutor
         {
-            set { _courseName = value; }
-            get { return _courseName; }
+            get { return _tutor; }
+            set { _tutor = value; }
         }
 
         public void Update()

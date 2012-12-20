@@ -10,8 +10,8 @@ namespace back_end
 {
     public abstract class Person : IModel
     {
-        private uint _id, _cpr, _phone, _cellPhone, _postal, _houseNumber;
-        private string _firstName, _lastName, _email, _street, _city;
+        private uint _id, _cpr, _phone, _cellPhone, _postal, _housenumber;
+        private string _firstname, _lastname, _email, _street, _city;
         private string[] _fields;
 
         public Person()
@@ -42,16 +42,16 @@ namespace back_end
             set { _cpr = value; }
         }
 
-        public string FirstName
+        public string Firstname
         {
-            get { return _firstName; }
-            set { _firstName = value; }
+            get { return _firstname; }
+            set { _firstname = value; }
         }
 
-        public string LastName
+        public string Lastname
         {
-            get { return _lastName; }
-            set { _lastName = value; }
+            get { return _lastname; }
+            set { _lastname = value; }
         }
 
         public uint Phone
@@ -80,8 +80,8 @@ namespace back_end
 
         public uint HouseNumber
         {
-            get { return _houseNumber; }
-            set { _houseNumber = value; }
+            get { return _housenumber; }
+            set { _housenumber = value; }
         }
 
         public uint PostalCode
@@ -96,6 +96,11 @@ namespace back_end
             set { _city = value; }
         }
 
+        public void Create()
+        {
+
+        }
+
         public void Read()
         {
             DataTable table = DatabaseCommand.Init()
@@ -107,8 +112,12 @@ namespace back_end
             _cpr = uint.Parse(table.Columns["cpr"].ToString());
             _firstname = table.Columns["firstname"].ToString();
             _lastname = table.Columns["lastname"].ToString();
-            _id = uint.Parse(table.Columns[""].ToString());
-
+            _street = table.Columns["street"].ToString();
+            _housenumber = uint.Parse(table.Columns["housenumber"].ToString());
+            _postal = uint.Parse(table.Columns["postal"].ToString());
+            _city = table.Columns["city"].ToString();
+            _email = table.Columns["email"].ToString();
+            _phone = uint.Parse(table.Columns["phone"].ToString());
         }
 
         public virtual void Update() // virtual because 2 classes inherit from person
