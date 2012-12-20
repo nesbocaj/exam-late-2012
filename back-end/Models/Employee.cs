@@ -9,8 +9,8 @@ namespace back_end
 {
     public class Employee : Person
     {
-        private uint _position, _salaryRate, _workingHours;
-        private string _accessword, _initials;
+        protected uint _position, _salaryRate, _workingHours;
+        protected string _accessword, _initials;
 
         public Employee()
         {

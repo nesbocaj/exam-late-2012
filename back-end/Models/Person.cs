@@ -10,9 +10,9 @@ namespace back_end
 {
     public abstract class Person : IModel
     {
-        private uint _id, _cpr, _phone, _cellPhone, _postal, _housenumber;
-        private string _firstname, _lastname, _email, _street, _city;
-        private string[] _fields;
+        protected uint _id, _cpr, _phone, _cellPhone, _postal, _housenumber;
+        protected string _firstname, _lastname, _email, _street, _city;
+        protected string[] _fields;
 
         public Person()
         {

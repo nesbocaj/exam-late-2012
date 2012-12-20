@@ -9,18 +9,26 @@ namespace back_end
     public class Controller
     {
         private static Controller _instance;
+        private Catalog<Employee> _employeeCatalog;
+        private Catalog<Tutor> _tutorCatalog;
+        private Catalog<Class> _classCatalog;
 
         private Controller()
         {
-
+            _employeeCatalog = new Catalog<Employee>();
+            _tutorCatalog = new Catalog<Tutor>();
+            _classCatalog = new Catalog<Class>();
         }
 
-        public static Controller GetInstance()
+        public static Controller Instance
         {
-            if(_instance == null)
-                _instance = new Controller();
+            get
+            {
+                if (_instance == null)
+                    _instance = new Controller();
 
-            return _instance;
+                return _instance;
+            }
         }
 
         public List<T> Search<T>(string input) where T : IModel
