@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using datalayer;
 
 namespace back_end
 {
@@ -58,7 +59,12 @@ namespace back_end
             set { _city = value; }
         }
 
-        public virtual void Update()
+        public void Read()
+        {
+            
+        }
+
+        public virtual void Update() // virtual because 2 classes inherit from person
         {
 
         }

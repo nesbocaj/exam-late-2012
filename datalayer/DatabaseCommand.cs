@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace datalayer
 {
-    class DatabaseCommand
+    public class DatabaseCommand
     {
         private DatabaseConnection _connection;
         private MySqlCommand _command;
