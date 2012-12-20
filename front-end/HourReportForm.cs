@@ -15,6 +15,13 @@ namespace exam_late_2012
         public HourReportForm()
         {
             InitializeComponent();
+            okButton.Click += ReportedHour;
+        }
+
+        public void ReportedHour (object sender, EventArgs e)
+        {
+            MessageBox.Show("Du har nu indberettet dine arbejdstimer.");
+            this.Close();
         }
 
         private void HourReportForm_Load(object sender, EventArgs e)

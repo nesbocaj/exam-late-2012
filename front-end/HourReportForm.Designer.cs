@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ReportText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TotalHoursText = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // ReportText
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(43, 20);
-            this.textBox1.TabIndex = 3;
+            this.ReportText.Location = new System.Drawing.Point(145, 54);
+            this.ReportText.Name = "ReportText";
+            this.ReportText.Size = new System.Drawing.Size(43, 20);
+            this.ReportText.TabIndex = 3;
             // 
             // label1
             // 
@@ -61,24 +61,24 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Samlede Arbejdet Timer:";
             // 
-            // textBox2
+            // TotalHoursText
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(43, 20);
-            this.textBox2.TabIndex = 6;
+            this.TotalHoursText.Location = new System.Drawing.Point(145, 80);
+            this.TotalHoursText.Name = "TotalHoursText";
+            this.TotalHoursText.ReadOnly = true;
+            this.TotalHoursText.Size = new System.Drawing.Size(43, 20);
+            this.TotalHoursText.TabIndex = 6;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.ReportText);
+            this.groupBox1.Controls.Add(this.TotalHoursText);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 178);
+            this.groupBox1.Size = new System.Drawing.Size(200, 149);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbejdstimer";
@@ -89,6 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(200, 178);
             this.Controls.Add(this.groupBox1);
+            this.MinimumSize = new System.Drawing.Size(216, 216);
             this.Name = "HourReportForm";
             this.Text = "Indberetning";
             this.Load += new System.EventHandler(this.HourReportForm_Load);
@@ -101,10 +102,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ReportText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TotalHoursText;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

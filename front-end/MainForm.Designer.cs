@@ -51,6 +51,7 @@
             this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjælpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjælpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeBeretningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.EmployeeTab.SuspendLayout();
             this.PrticipantTab.SuspendLayout();
@@ -241,6 +242,8 @@
             // 
             // hjælpToolStripMenuItem
             // 
+            this.hjælpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.timeBeretningToolStripMenuItem});
             this.hjælpToolStripMenuItem.Name = "hjælpToolStripMenuItem";
             this.hjælpToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
             this.hjælpToolStripMenuItem.Text = "Vis";
@@ -250,6 +253,13 @@
             this.hjælpToolStripMenuItem1.Name = "hjælpToolStripMenuItem1";
             this.hjælpToolStripMenuItem1.Size = new System.Drawing.Size(51, 20);
             this.hjælpToolStripMenuItem1.Text = "Hjælp";
+            // 
+            // timeBeretningToolStripMenuItem
+            // 
+            this.timeBeretningToolStripMenuItem.Name = "timeBeretningToolStripMenuItem";
+            this.timeBeretningToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.timeBeretningToolStripMenuItem.Text = "Time Beretning";
+            this.timeBeretningToolStripMenuItem.Click += new System.EventHandler(this.timeBeretningToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -300,6 +310,7 @@
         private BaseTabControl CourseControl;
         private System.Windows.Forms.TabPage ClassTab;
         private BaseTabControl ClassControl;
+        private System.Windows.Forms.ToolStripMenuItem timeBeretningToolStripMenuItem;
     }
 }
 

@@ -177,5 +177,12 @@ namespace exam_late_2012
             LoginForm loginWindow = new LoginForm(this);
             loginWindow.ShowDialog();
         }
+
+        private void timeBeretningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HourReportForm HRF = new HourReportForm();
+
+            HRF.ShowForm();
+        }
     }
 }

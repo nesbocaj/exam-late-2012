@@ -21,6 +21,8 @@ namespace exam_late_2012
         public void Print (object sender, EventArgs e)
         {
 
+
+            this.Close();
         }
     }
 }
