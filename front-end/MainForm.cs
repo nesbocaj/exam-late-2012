@@ -83,8 +83,8 @@ namespace exam_late_2012
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
                 resultItems[i].SubItems.Add(results[i].CourseName);
-                resultItems[i].SubItems.Add(results[i].Difficulty);
-                resultItems[i].SubItems.Add(results[i].TypeID);
+                resultItems[i].SubItems.Add(results[i].Difficulty.ToString());
+                resultItems[i].SubItems.Add(results[i].TypeID.ToString());
 
                 CourseControl.listView.Items.Add(resultItems[i]);
             }
@@ -100,10 +100,10 @@ namespace exam_late_2012
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].ClassName);
-                resultItems[i].SubItems.Add(results[i].CourseID);
-                resultItems[i].SubItems.Add(results[i].RoomID);
-                resultItems[i].SubItems.Add(results[i].PersonID);
+                resultItems[i].SubItems.Add(results[i].CourseName);
+                resultItems[i].SubItems.Add(results[i].CourseID.ToString());
+                resultItems[i].SubItems.Add(results[i].RoomID.ToString());
+                resultItems[i].SubItems.Add(results[i].PersonID.ToString());
 
                 ClassControl.listView.Items.Add(resultItems[i]);
             }
@@ -111,9 +111,34 @@ namespace exam_late_2012
 
         public void EditEmployee_Click(object sender, EventArgs e)
         {
+            int ID = Convert.ToInt32(EmployeeControl.listView.SelectedItems[0].SubItems[0]);
             AddEmployeeForm addEmp = new AddEmployeeForm();
 
-            addEmp.ShowForm();
+            addEmp.ShowForm(ID);
+        }
+
+        public void EditParticipant_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(ParticipantControl.listView.SelectedItems[0].SubItems[0]);
+            AddParticipantForm addPar = new AddParticipantForm();
+
+            addPar.ShowForm(ID);
+        }
+
+        public void EditCourse_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(CourseControl.listView.SelectedItems[0].SubItems[0]);
+            AddCourseForm addCou = new AddCourseForm();
+
+            addCou.ShowForm(ID);
+        }
+
+        public void EditClass_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(ClassControl.listView.SelectedItems[0].SubItems[0]);
+            AddClassForm addCla = new AddClassForm();
+
+            addCla.ShowForm(ID);
         }
 
         public void AddEmployee_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using back_end;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace exam_late_2012
     public partial class BaseAddForm : Form
     {
 
-        private back_end.Controller InputControl;
+        private Controller InputControl;
 
         public BaseAddForm()
         {
