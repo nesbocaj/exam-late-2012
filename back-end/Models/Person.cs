@@ -104,6 +104,10 @@ namespace back_end
                 .Join("Person_Email", "id", "person_id")
                 .ExecuteAndReturn();
             _id = uint.Parse(table.Columns["id"].ToString());
+            _cpr = uint.Parse(table.Columns["cpr"].ToString());
+            _firstname = table.Columns["firstname"].ToString();
+            _lastname = table.Columns["lastname"].ToString();
+            _id = uint.Parse(table.Columns[""].ToString());
 
         }
 
