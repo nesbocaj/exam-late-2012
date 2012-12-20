@@ -39,23 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalog.cs" />
-    <Compile Include="CatalogFactory.cs" />
-    <Compile Include="Class.cs" />
-    <Compile Include="ClassInvoice.cs" />
-    <Compile Include="ClassInvoiceLine.cs" />
-    <Compile Include="Course.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="FluentFactory.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Models\Catalog.cs" />
+    <Compile Include="Factories\CatalogFactory.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\ClassInvoice.cs" />
+    <Compile Include="Models\ClassInvoiceLine.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Factories\FluentFactory.cs" />
     <Compile Include="IModel.cs" />
-    <Compile Include="ModelFactory.cs" />
-    <Compile Include="Participant.cs" />
-    <Compile Include="ParticipantInvoice.cs" />
-    <Compile Include="ParticipantInvoiceLine.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Factories\ModelFactory.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\ParticipantInvoice.cs" />
+    <Compile Include="Models\ParticipantInvoiceLine.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security.cs" />
-    <Compile Include="SingletonFactory.cs" />
+    <Compile Include="Factories\SingletonFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\datalayer\datalayer.csproj">

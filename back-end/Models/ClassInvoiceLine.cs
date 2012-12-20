@@ -18,6 +18,7 @@ namespace back_end
         
         public int ID
         {
+            get { return _id; }
             set { _id = Convert.ToInt32("" + _invoiceId.ToString() + _personId.ToString()); }
         }
 
@@ -41,6 +42,7 @@ namespace back_end
 
         public void Update()
         {
-    }
+
         }
+    }
 }
