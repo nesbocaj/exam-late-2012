@@ -10,8 +10,8 @@ namespace back_end
 {
     public class Employee : Person
     {
-        protected uint _position, _salaryRate, _workingHours;
-        protected string _accessword, _initials;
+        protected uint _salaryRate, _workingHours;
+        protected string _accessword, _initials, _position;
         protected string[] _employeeFields;
 
         public Employee()
@@ -24,7 +24,7 @@ namespace back_end
             };
         }
 
-        public uint Position
+        public string Position
         {
             set { _position = value;}
             get { return _position; }
@@ -54,7 +54,7 @@ namespace back_end
             get { return _initials; }
         }
 
-        public void Read()
+        public override void Read()
         {
             base.Read();
             DataTable employeeTable = DatabaseCommand.Init()
@@ -62,6 +62,11 @@ namespace back_end
                 .Join("Employee_Position", "position_id", "id")
                 .Join("Salaryrate", "salaryrate_id", "id")
                 .ExecuteAndReturn();
+            //_salaryRate = uint.Parse("Salaryrate")
+            _position = employeeTable.Columns["name"].ToString();
+            _initials = employeeTable.Columns["initials"].ToString();
+            _accessword = employeeTable.Columns["accessword"].ToString();
+            _workingHours = uint.Parse(employeeTable.Columns["working_hours"].ToString());
             
         }
 
