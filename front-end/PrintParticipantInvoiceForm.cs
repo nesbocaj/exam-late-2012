@@ -15,8 +15,13 @@ namespace exam_late_2012
         public PrintParticipantInvoiceForm()
         {
             InitializeComponent();
+            okButton.Click += Print;
         }
 
+        public void Print(object sender, EventArgs e)
+        {
+
+        }
         private void PrintParticipantInvoiceForm_Load(object sender, EventArgs e)
         {
 

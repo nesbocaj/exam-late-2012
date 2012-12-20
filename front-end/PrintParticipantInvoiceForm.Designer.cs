@@ -193,6 +193,7 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(6, 19);
             this.listView1.Name = "listView1";
+            this.listView1.Scrollable = false;
             this.listView1.Size = new System.Drawing.Size(121, 215);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -233,6 +234,7 @@
             this.Controls.Add(this.TotalText);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MinimumSize = new System.Drawing.Size(376, 361);
             this.Name = "PrintParticipantInvoiceForm";
             this.Text = "Faktura";
             this.Load += new System.EventHandler(this.PrintParticipantInvoiceForm_Load);

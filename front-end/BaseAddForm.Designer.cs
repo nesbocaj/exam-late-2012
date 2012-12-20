@@ -44,6 +44,7 @@
             this.printButton.TabIndex = 1;
             this.printButton.Text = "Print";
             this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Visible = false;
             // 
             // okButton
             // 

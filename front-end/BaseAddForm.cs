@@ -19,7 +19,7 @@ namespace exam_late_2012
         public BaseAddForm()
         {
             InitializeComponent();
-            this.printButton.Click += Cancel_Click;
+            this.cancelButton.Click += Cancel_Click;
         }
 
         public void ShowForm(int? id = null)

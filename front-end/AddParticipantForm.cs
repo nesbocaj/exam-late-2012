@@ -15,6 +15,15 @@ namespace exam_late_2012
         public AddParticipantForm()
         {
             InitializeComponent();
+            this.printButton.Visible = true;
+            this.printButton.Click += Print_Click;
+        }
+
+        public void Print_Click(object sender, EventArgs e)
+        {
+            PrintParticipantInvoiceForm PPIF = new PrintParticipantInvoiceForm();
+
+            PPIF.ShowForm();
         }
     }
 }
