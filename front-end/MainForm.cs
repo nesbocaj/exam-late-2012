@@ -1,4 +1,5 @@
-﻿using System;
+﻿using back_end;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace exam_late_2012
 {
     public partial class MainForm : Form
     {
+
+        private Controller SearchControl;
+
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +29,25 @@ namespace exam_late_2012
             ParticipantControl.EditButton.Click += AddParticipant_Click;
             CourseControl.EditButton.Click += AddCourse_Click;
             ClassControl.EditButton.Click += AddClass_Click;
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (EmployeeControl)
+            EmployeeControl.listView.Clear();
+            
+            List<Employee> results = SearchControl.Search<Employee>(EmployeeControl.SearchBox.Text);
+            ListViewItem[] resultItems = new ListViewItem[results.Count];
+
+            for (int i = 0; i < results.Count; i++)
+            {
+                resultItems[i] = new ListViewItem(results[i].ID.ToString());
+                resultItems[i].SubItems.Add(results[i].FirstName);
+                resultItems[i].SubItems.Add(results[i].LastName);
+                resultItems[i].SubItems.Add(results[i].initials);
+
+                EmployeeControl.listView.Items.Add(resultItems[i]);
+            }
         }
 
         public void EditEmployee_Click(object sender, EventArgs e)

@@ -16,15 +16,5 @@ namespace exam_late_2012
         {
             InitializeComponent();
         }
-
-        protected override void SaveExisting(object sender, EventArgs e)
-        {
-
-        }
-
-        protected override void SaveNew(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

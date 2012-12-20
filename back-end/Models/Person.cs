@@ -7,7 +7,7 @@ using datalayer;
 
 namespace back_end
 {
-    abstract class Person : IModel
+    public abstract class Person : IModel
     {
         private int _id, _ssn, _postal, _houseNumber;
         private uint _phone, _cellPhone;

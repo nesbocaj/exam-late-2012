@@ -12,6 +12,9 @@ namespace exam_late_2012
 {
     public partial class BaseAddForm : Form
     {
+
+        private back_end.Controller InputControl;
+
         public BaseAddForm()
         {
             InitializeComponent();
@@ -38,6 +41,7 @@ namespace exam_late_2012
 
         protected virtual void SaveNew(object sender, EventArgs e)
         {
+            //InputControl.
             this.Close();
         }
 

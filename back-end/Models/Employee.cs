@@ -10,7 +10,7 @@ namespace back_end
     public class Employee : Person
     {
         private int _id, _position, _salaryRate, _workingHours;
-        private string _accessword;
+        private string _accessword, initials;
 
         public Employee()
         {

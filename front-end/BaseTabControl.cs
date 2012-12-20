@@ -13,8 +13,6 @@ namespace exam_late_2012
     public partial class BaseTabControl : UserControl
     {
 
-        private back_end.Controller SearchControl;
-
         public BaseTabControl()
         {
             InitializeComponent();
@@ -32,15 +30,6 @@ namespace exam_late_2012
                 DeleteButton.Enabled = false;
                 EditButton.Enabled = false;
             }
-        }
-
-        private void SearchBox_TextChanged(object sender, EventArgs e)
-        {
-            ListViewItem SearchOutput;
-
-            SearchControl.Search(SearchBox.Text.ToString()) = SearchOutput;
-
-            listView.Items.Add(SearchOutput);
         }
     }
 }
