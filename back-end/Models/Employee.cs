@@ -1,4 +1,5 @@
-﻿using System;
+﻿using datalayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,13 +20,13 @@ namespace back_end
         public int Position
         {
             set { _position = value;}
-            get { return _position;}
+            get { return _position; }
         }
 
         public int SalaryRate
         {
             set { _salaryRate = value;}
-            get { return _salaryRate;}
+            get { return _salaryRate; }
         }
 
         public int WorkingHours

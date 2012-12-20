@@ -7,14 +7,15 @@ using datalayer;
 
 namespace back_end
 {
-    public class Person : IModel
+    abstract class Person : IModel
     {
         private int _id, _ssn, _postal, _houseNumber;
-        private string _firstName, _lastName, _city;
+        private uint _phone, _cellPhone;
+        private string _firstName, _lastName, _email, _city;
 
         public Person()
         {
-
+            
         }
 
         public int ID
@@ -29,18 +30,6 @@ namespace back_end
             set { _ssn = value; }
         }
 
-        public int PostalCode
-        {
-            get { return _postal; }
-            set { _postal = value; }
-        }
-
-        public int HouseNumber
-        {
-            get { return _houseNumber; }
-            set { _houseNumber = value; }
-        }
-
         public string FirstName
         {
             get { return _firstName; }
@@ -52,6 +41,36 @@ namespace back_end
             get { return _lastName; }
             set { _lastName = value; }
         }
+
+        public uint Phone
+        {
+            get { return _phone; }
+            set { _phone = value; }
+        }
+
+        public uint CellPhone
+        {
+            get { return _cellPhone; }
+            set { _cellPhone = value; }
+        }
+
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        public int PostalCode
+        {
+            get { return _postal; }
+            set { _postal = value; }
+        }
+
+        public int HouseNumber
+        {
+            get { return _houseNumber; }
+            set { _houseNumber = value; }
+        }        
 
         public string City
         {
@@ -66,7 +85,7 @@ namespace back_end
 
         public virtual void Update() // virtual because 2 classes inherit from person
         {
-
+            
         }
     }
 }
