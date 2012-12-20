@@ -36,7 +36,11 @@ namespace exam_late_2012
 
         private void SearchBox_TextChanged(object sender, EventArgs e)
         {
-            SearchControl.Search(SearchBox.Text.ToString());
+            ListViewItem SearchOutput;
+
+            SearchControl.Search(SearchBox.Text.ToString()) = SearchOutput;
+
+            listView.Items.Add(SearchOutput);
         }
     }
 }
