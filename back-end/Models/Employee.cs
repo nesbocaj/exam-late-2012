@@ -53,7 +53,7 @@ namespace back_end
             set { _initials = value; }
             get { return _initials; }
         }
-
+        /*
         public override void Read(int id)
         {
             base.Read();
@@ -70,7 +70,7 @@ namespace back_end
             _workingHours = uint.Parse(employeeTable.Rows[0]["working_hours"].ToString());
             
         }
-
+        */
         public override void Update()
         {
             // Has to be there as a part of an interface
