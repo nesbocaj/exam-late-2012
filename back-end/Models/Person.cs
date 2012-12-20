@@ -96,12 +96,12 @@ namespace back_end
             set { _city = value; }
         }
 
-        public void Create()
+        public virtual void Create()
         {
 
         }
 
-        public void Read()
+        public virtual void Read()
         {
             DataTable table = DatabaseCommand.Init()
                 .Select(_fields, "Person")
@@ -123,6 +123,14 @@ namespace back_end
         public virtual void Update() // virtual because 2 classes inherit from person
         {
 
+        }
+
+        public virtual void Delete()
+        {
+            DatabaseCommand.Init()
+                .Delete("Person")
+                .Where("id", "=", _id)
+                .Execute();
         }
     }
 }
