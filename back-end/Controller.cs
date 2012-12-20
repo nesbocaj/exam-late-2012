@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace back_end
 {
-    class Controller
+    public class Controller
     {
         private static Controller _instance;
 

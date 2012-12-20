@@ -12,24 +12,12 @@ namespace exam_late_2012
 {
     public partial class BaseTabControl : UserControl
     {
+
+        private back_end.Controller SearchControl;
+
         public BaseTabControl()
         {
             InitializeComponent();
-                    
-        }
-
-        public void SearchEmployee(object sender, EventArgs e)
-        {
-
-            string Indeks, Tekst;
-            int tal;
-
-            Indeks = "Test";
-            Tekst = "Test";
-            tal = 1;
-
-            SearchBox.Text.ToString();
-            listView.Items.Add(Indeks, Tekst, tal);
         }
 
         private void listView_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,6 +32,11 @@ namespace exam_late_2012
                 DeleteButton.Enabled = false;
                 EditButton.Enabled = false;
             }
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            SearchControl.Search(SearchBox.Text.ToString());
         }
     }
 }
