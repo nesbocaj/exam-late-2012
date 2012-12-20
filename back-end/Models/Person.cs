@@ -4,30 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using datalayer;
+using System.Data;
 
 namespace back_end
 {
     public abstract class Person : IModel
     {
-        private int _id, _ssn, _postal, _houseNumber;
-        private uint _phone, _cellPhone;
-        private string _firstName, _lastName, _email, _city;
+        private uint _id, _cpr, _phone, _cellPhone, _postal, _houseNumber;
+        private string _firstName, _lastName, _email, _street, _city;
+        private string[] _fields;
 
         public Person()
         {
-            
+            _fields = new string[] {
+                "id",
+                "cpr",
+                "firstname",
+                "lastname",
+                "street",
+                "housenumber",
+                "postal",
+                "city",
+                "email",
+                "phone"
+            };
         }
 
-        public int ID
+        public uint ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public int SSN
+        public uint CPR
         {
-            get { return _ssn; }
-            set { _ssn = value; }
+            get { return _cpr; }
+            set { _cpr = value; }
         }
 
         public string FirstName
@@ -60,17 +72,23 @@ namespace back_end
             set { _email = value; }
         }
 
-        public int PostalCode
+        public string Street
+        {
+            get { return _street; }
+            set { _street = value; }
+        }
+
+        public uint HouseNumber
+        {
+            get { return _houseNumber; }
+            set { _houseNumber = value; }
+        }
+
+        public uint PostalCode
         {
             get { return _postal; }
             set { _postal = value; }
         }
-
-        public int HouseNumber
-        {
-            get { return _houseNumber; }
-            set { _houseNumber = value; }
-        }        
 
         public string City
         {
@@ -80,12 +98,18 @@ namespace back_end
 
         public void Read()
         {
-            
+            DataTable table = DatabaseCommand.Init()
+                .Select(_fields, "Person")
+                .Join("Person_Phone", "id", "person_id")
+                .Join("Person_Email", "id", "person_id")
+                .ExecuteAndReturn();
+            _id = uint.Parse(table.Columns["id"].ToString());
+
         }
 
         public virtual void Update() // virtual because 2 classes inherit from person
         {
-            
+
         }
     }
 }

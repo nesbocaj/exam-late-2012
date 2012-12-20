@@ -7,9 +7,9 @@ using datalayer;
 
 namespace back_end
 {
-    interface IModel
+    public interface IModel
     {
-        int ID
+        uint ID
         {
             get;
             set;
