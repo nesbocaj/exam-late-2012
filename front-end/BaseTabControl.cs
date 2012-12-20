@@ -21,7 +21,6 @@ namespace exam_late_2012
         public void SearchEmployee(object sender, EventArgs e)
         {
 
-            Search
             string Indeks, Tekst;
             int tal;
 
