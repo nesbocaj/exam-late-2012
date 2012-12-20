@@ -20,6 +20,18 @@ namespace exam_late_2012
             ParticipantControl.AddButton.Click += AddParticipant_Click;
             CourseControl.AddButton.Click += AddCourse_Click;
             ClassControl.AddButton.Click += AddClass_Click;
+
+            EmployeeControl.EditButton.Click += EditEmployee_Click;
+            ParticipantControl.EditButton.Click += AddParticipant_Click;
+            CourseControl.EditButton.Click += AddCourse_Click;
+            ClassControl.EditButton.Click += AddClass_Click;
+        }
+
+        public void EditEmployee_Click(object sender, EventArgs e)
+        {
+            AddEmployeeForm addEmp = new AddEmployeeForm();
+
+            addEmp.ShowForm();
         }
 
         public void AddEmployee_Click(object sender, EventArgs e)

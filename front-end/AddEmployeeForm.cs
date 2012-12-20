@@ -17,12 +17,12 @@ namespace exam_late_2012
             InitializeComponent();
         }
 
-        protected virtual void SaveExisting(object sender, EventArgs e)
+        protected void SaveExisting(object sender, EventArgs e)
         {
 
         }
 
-        protected virtual void SaveNew(object sender, EventArgs e)
+        protected void SaveNew(object sender, EventArgs e)
         {
             this.Close();
         }

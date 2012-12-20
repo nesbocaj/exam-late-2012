@@ -16,5 +16,19 @@ namespace exam_late_2012
         {
             InitializeComponent();
         }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems != null)
+            {
+                DeleteButton.Enabled = true;
+                EditButton.Enabled = true;
+            }
+            else
+            {
+                DeleteButton.Enabled = false;
+                EditButton.Enabled = false;
+            }
+        }
     }
 }
