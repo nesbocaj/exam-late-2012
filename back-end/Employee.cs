@@ -42,7 +42,7 @@ namespace back_end
 
         public override void Update()
         {
-           //Skal være der som en del af interface
+            // Has to be there as a part of an interface
         }
     }
 }
