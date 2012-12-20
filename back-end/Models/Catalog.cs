@@ -55,7 +55,27 @@ namespace back_end
             GC.Collect();
         }
 
-        public void 
+        public T Get(string input)
+        {
+            int num;
+            T output = default(T);
+            if (Int32.TryParse(input, out num))
+            {
+                try
+                {
+                    //typeof(T).GetProperty("")
+                }
+                catch (Exception all)
+                {
+
+                }
+                return output;
+            }
+            else
+            {
+                return output;
+            }
+        }
 
     }
 }

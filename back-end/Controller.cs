@@ -25,7 +25,7 @@ namespace back_end
         }
 
 
-        public List<T> Search<T>(string input)
+        public List<T> Search<T>(string input) where T : IModel
         {
 
         }
