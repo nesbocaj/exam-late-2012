@@ -43,6 +43,7 @@
     <Compile Include="CatalogFactory.cs" />
     <Compile Include="Class.cs" />
     <Compile Include="ClassInvoice.cs" />
+    <Compile Include="ClassInvoiceLine.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FluentFactory.cs" />
