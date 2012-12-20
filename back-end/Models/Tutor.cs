@@ -20,6 +20,6 @@ namespace back_end.Models
         {
             get { return _experience; }
             set { _experience = value; }
-            }
+        }
     }
 }

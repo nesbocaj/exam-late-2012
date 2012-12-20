@@ -22,7 +22,7 @@ namespace datalayer
             _connectionStrBuilder.Port     = 3306;
             _connectionStrBuilder.UserID   = "exam-2012";
             _connectionStrBuilder.Password = "2012";
-            _connectionStrBuilder.Database = "exam-2012";
+            _connectionStrBuilder.Database = "exam-late-2012";
 
             _connectionStr = _connectionStrBuilder.ConnectionString;
 
