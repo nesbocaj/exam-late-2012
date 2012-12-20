@@ -10,7 +10,7 @@ namespace back_end
     public class Employee : Person
     {
         private uint _position, _salaryRate, _workingHours;
-        private string _accessword, initials;
+        private string _accessword, _initials;
 
         public Employee()
         {
@@ -39,6 +39,12 @@ namespace back_end
         {
             set { _accessword = value;}
             get { return _accessword; }
+        }
+
+        public string initials
+        {
+            set { _initials = value; }
+            get { return _initials; }
         }
 
         public override void Update()

@@ -46,8 +46,8 @@ namespace exam_late_2012
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].FirstName);
-                resultItems[i].SubItems.Add(results[i].LastName);
+                resultItems[i].SubItems.Add(results[i].Firstname);
+                resultItems[i].SubItems.Add(results[i].Lastname);
                 resultItems[i].SubItems.Add(results[i].initials);
 
                 EmployeeControl.listView.Items.Add(resultItems[i]);
@@ -64,8 +64,8 @@ namespace exam_late_2012
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].FirstName);
-                resultItems[i].SubItems.Add(results[i].LastName);
+                resultItems[i].SubItems.Add(results[i].Firstname);
+                resultItems[i].SubItems.Add(results[i].Lastname);
                 resultItems[i].SubItems.Add(results[i].Email);
 
                 ParticipantControl.listView.Items.Add(resultItems[i]);
@@ -82,7 +82,7 @@ namespace exam_late_2012
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].CourseName);
+                resultItems[i].SubItems.Add(results[i].Name);
                 resultItems[i].SubItems.Add(results[i].Difficulty.ToString());
                 resultItems[i].SubItems.Add(results[i].TypeID.ToString());
 
@@ -100,10 +100,10 @@ namespace exam_late_2012
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].CourseName);
-                resultItems[i].SubItems.Add(results[i].CourseID.ToString());
+                resultItems[i].SubItems.Add(results[i].Name);
+                resultItems[i].SubItems.Add(results[i].Course.Name);
                 resultItems[i].SubItems.Add(results[i].RoomID.ToString());
-                resultItems[i].SubItems.Add(results[i].PersonID.ToString());
+                resultItems[i].SubItems.Add(results[i].Tutor.Firstname + " " + results[i].Tutor.Lastname);
 
                 ClassControl.listView.Items.Add(resultItems[i]);
             }
