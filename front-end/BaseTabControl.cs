@@ -15,6 +15,22 @@ namespace exam_late_2012
         public BaseTabControl()
         {
             InitializeComponent();
+                    
+        }
+
+        public void SearchEmployee(object sender, EventArgs e)
+        {
+
+            Search
+            string Indeks, Tekst;
+            int tal;
+
+            Indeks = "Test";
+            Tekst = "Test";
+            tal = 1;
+
+            SearchBox.Text.ToString();
+            listView.Items.Add(Indeks, Tekst, tal);
         }
 
         private void listView_SelectedIndexChanged(object sender, EventArgs e)

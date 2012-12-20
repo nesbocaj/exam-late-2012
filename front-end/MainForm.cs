@@ -15,7 +15,7 @@ namespace exam_late_2012
         public MainForm()
         {
             InitializeComponent();
-            
+
             EmployeeControl.AddButton.Click += AddEmployee_Click;
             ParticipantControl.AddButton.Click += AddParticipant_Click;
             CourseControl.AddButton.Click += AddCourse_Click;
