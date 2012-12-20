@@ -122,7 +122,7 @@ namespace back_end
 
         public virtual void Update() // virtual because 2 classes inherit from person
         {
-
+            
         }
 
         public virtual void Delete()
