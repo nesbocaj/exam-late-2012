@@ -108,16 +108,17 @@ namespace back_end
                 .Join("Person_Phone", "id", "person_id")
                 .Join("Person_Email", "id", "person_id")
                 .ExecuteAndReturn();
-            _id = uint.Parse(table.Columns["id"].ToString());
-            _cpr = uint.Parse(table.Columns["cpr"].ToString());
-            _firstname = table.Columns["firstname"].ToString();
-            _lastname = table.Columns["lastname"].ToString();
-            _street = table.Columns["street"].ToString();
-            _housenumber = uint.Parse(table.Columns["housenumber"].ToString());
-            _postal = uint.Parse(table.Columns["postal"].ToString());
-            _city = table.Columns["city"].ToString();
-            _email = table.Columns["email"].ToString();
-            _phone = uint.Parse(table.Columns["phone"].ToString());
+            _id = uint.Parse(table.Rows[0]["id"].ToString());
+            _cpr = uint.Parse(table.Rows[0]["cpr"].ToString());
+            _firstname = table.Rows[0]["firstname"].ToString();
+            _lastname = table.Rows[0]["lastname"].ToString();
+            _street = table.Rows[0]["street"].ToString();
+            _housenumber = uint.Parse(table.Rows[0]["housenumber"].ToString());
+            _postal = uint.Parse(table.Rows[0]["postal"].ToString());
+            _city = table.Rows[0]["city"].ToString();
+            _email = table.Rows[0]["email"].ToString();
+            _phone = uint.Parse(table.Rows[0]["phone"].ToString());
+            _cellPhone = uint.Parse(table.Rows[1]["phone"].ToString());
         }
 
         public virtual void Update() // virtual because 2 classes inherit from person

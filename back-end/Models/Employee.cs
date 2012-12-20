@@ -17,10 +17,10 @@ namespace back_end
         public Employee()
         {
             _employeeFields = new string[] {
-            "name",
-            "initials",
-            "accessword",
-            "working_hours"
+                "name",
+                "initials",
+                "accessword",
+                "working_hours"
             };
         }
 
@@ -54,19 +54,20 @@ namespace back_end
             get { return _initials; }
         }
 
-        public override void Read()
+        public override void Read(int id)
         {
             base.Read();
             DataTable employeeTable = DatabaseCommand.Init()
                 .Select(_fields, "Employee")
+                .Where("id", "=", id)
                 .Join("Employee_Position", "position_id", "id")
                 .Join("Salaryrate", "salaryrate_id", "id")
                 .ExecuteAndReturn();
             //_salaryRate = uint.Parse("Salaryrate")
-            _position = employeeTable.Columns["name"].ToString();
-            _initials = employeeTable.Columns["initials"].ToString();
-            _accessword = employeeTable.Columns["accessword"].ToString();
-            _workingHours = uint.Parse(employeeTable.Columns["working_hours"].ToString());
+            _position = employeeTable.Rows[0]["name"].ToString();
+            _initials = employeeTable.Rows[0]["initials"].ToString();
+            _accessword = employeeTable.Rows[0]["accessword"].ToString();
+            _workingHours = uint.Parse(employeeTable.Rows[0]["working_hours"].ToString());
             
         }
 

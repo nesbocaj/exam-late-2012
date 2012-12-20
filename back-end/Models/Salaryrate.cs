@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace back_end.Models
+namespace back_end
 {
     class Salaryrate
     {
