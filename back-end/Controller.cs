@@ -15,7 +15,6 @@ namespace back_end
 
         }
 
-
         public static Controller GetInstance()
         {
             if(_instance == null)
@@ -24,11 +23,9 @@ namespace back_end
             return _instance;
         }
 
-
         public List<T> Search<T>(string input) where T : IModel
         {
-
+            return default(List<T>);
         }
-
     }
 }

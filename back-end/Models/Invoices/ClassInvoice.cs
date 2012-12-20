@@ -8,7 +8,7 @@ namespace back_end
 {
     public class ClassInvoice : IModel
     {
-        private int _id, _classId;
+        private uint _id, _classId;
         private double _total, _paid;
         //private Dictionary<int, ClassInvoiceLine> _invoiceLine;
 
@@ -17,13 +17,13 @@ namespace back_end
 
         }
 
-        public int ID
+        public uint ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        public int ClassID
+        public uint ClassID
         {
             get { return _classId; }
             set { _classId = value; }

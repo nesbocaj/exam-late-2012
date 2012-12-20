@@ -8,7 +8,7 @@ namespace back_end
 {
     public class Course : IModel
     {
-        private int _id, _courseTypeId, _diffiulty;
+        private uint _id, _courseTypeId, _diffiulty;
         private string _name;
         private double _price;
         private List<Course> requiredCourses;
@@ -18,7 +18,7 @@ namespace back_end
 
         }
 
-        public int ID
+        public uint ID
         {
             set { _id = value; }
             get { return _id; }
@@ -30,13 +30,13 @@ namespace back_end
             get { return _name; }
         }
 
-        public int TypeID
+        public uint TypeID
         {
             set { _courseTypeId = value; }
             get { return _courseTypeId; }
         }
 
-        public int Difficulty
+        public uint Difficulty
         {
             set { _diffiulty = value; }
             get { return _diffiulty; }

@@ -8,27 +8,27 @@ namespace back_end
 {
     class ClassInvoiceLine: IModel
     {
-        private int _invoiceId; private int _personId, _id;
-        private  double _subtotal;
+        private uint _invoiceId, _personId, _id;
+        private double _subtotal;
 
         public ClassInvoiceLine()
         {
 
         }
         
-        public int ID
+        public uint ID
         {
             get { return _id; }
-            set { _id = Convert.ToInt32("" + _invoiceId.ToString() + _personId.ToString()); }
+            set { _id = Convert.ToUInt32("" + _invoiceId.ToString() + _personId.ToString()); }
         }
 
-        public int ClassInvoiceId
+        public uint ClassInvoiceId
         {
             set { _invoiceId = value; }
             get { return _invoiceId + _personId;}
         }
 
-        public int PersonId
+        public uint PersonId
         {
             set { _personId = value; }
             get { return _personId; }
