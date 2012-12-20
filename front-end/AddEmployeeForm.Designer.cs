@@ -130,6 +130,7 @@
             // 
             // RankCBox
             // 
+            this.RankCBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RankCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RankCBox.FormattingEnabled = true;
             this.RankCBox.Location = new System.Drawing.Point(111, 19);
@@ -201,13 +202,14 @@
             this.QualificationCheck.Size = new System.Drawing.Size(201, 199);
             this.QualificationCheck.TabIndex = 13;
             // 
-            // AddEmployee
+            // AddEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 397);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Name = "AddEmployee";
+            this.MinimumSize = new System.Drawing.Size(461, 436);
+            this.Name = "AddEmployeeForm";
             this.Text = "Opret Medarbejder";
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.OKButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CancelButton
+            // printButton
             // 
-            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Location = new System.Drawing.Point(125, 3);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelButton.TabIndex = 1;
-            this.CancelButton.Text = "Annullér";
-            this.CancelButton.UseVisualStyleBackColor = true;
+            this.printButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.printButton.Location = new System.Drawing.Point(3, 3);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(75, 23);
+            this.printButton.TabIndex = 1;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = true;
             // 
-            // OKButton
+            // okButton
             // 
-            this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OKButton.Location = new System.Drawing.Point(206, 3);
-            this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(75, 23);
-            this.OKButton.TabIndex = 0;
-            this.OKButton.Text = "OK";
-            this.OKButton.UseVisualStyleBackColor = true;
+            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.okButton.Location = new System.Drawing.Point(125, 3);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 23);
+            this.okButton.TabIndex = 0;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -60,8 +61,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.CancelButton, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.OKButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cancelButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.printButton, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.okButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 232);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -71,6 +73,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 29);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.Location = new System.Drawing.Point(206, 3);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Text = "Annullér";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
             // BaseAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,6 +91,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "BaseAddForm";
             this.Text = "Opret";
+            this.Shown += new System.EventHandler(this.BaseAddForm_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -86,9 +99,10 @@
 
         #endregion
 
-        protected System.Windows.Forms.Button CancelButton;
-        protected System.Windows.Forms.Button OKButton;
+        protected System.Windows.Forms.Button printButton;
+        protected System.Windows.Forms.Button okButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        protected System.Windows.Forms.Button cancelButton;
 
     }
 }

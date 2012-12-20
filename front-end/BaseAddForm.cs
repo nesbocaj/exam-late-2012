@@ -14,23 +14,23 @@ namespace exam_late_2012
     public partial class BaseAddForm : Form
     {
 
-        private Controller InputControl;
+        protected Controller controller;
 
         public BaseAddForm()
         {
             InitializeComponent();
-            this.CancelButton.Click += Cancel_Click;
+            this.printButton.Click += Cancel_Click;
         }
 
         public void ShowForm(int? id = null)
         {
             if (id != null)
             {
-                OKButton.Click += SaveExisting;
+                okButton.Click += SaveExisting;
                 this.Text = this.Text.Replace("Opret", "Rediger");
             }
             else
-                OKButton.Click += SaveNew;
+                okButton.Click += SaveNew;
 
             this.ShowDialog();
         }
@@ -49,6 +49,11 @@ namespace exam_late_2012
         public void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        protected void BaseAddForm_Shown(object sender, EventArgs e)
+        {
+            this.MinimumSize = this.Size;
         }
     }
 }
