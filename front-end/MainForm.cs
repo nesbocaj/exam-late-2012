@@ -27,8 +27,8 @@ namespace exam_late_2012
 
             EmployeeControl.SearchBox.TextChanged += EmployeeSearch_TextChanged;
             ParticipantControl.SearchBox.TextChanged += ParticipantSearch_TextChanged;
-            CourseControl.SearchBox.TextChanged += CourseControl_TextChanged;
-            ClassControl.SearchBox.TextChanged += ClassControl_TextChanged;
+            CourseControl.SearchBox.TextChanged += CourseSearch_TextChanged;
+            ClassControl.SearchBox.TextChanged += ClassSearch_TextChanged;
 
             EmployeeControl.EditButton.Click += EditEmployee_Click;
             ParticipantControl.EditButton.Click += AddParticipant_Click;
@@ -66,45 +66,46 @@ namespace exam_late_2012
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
                 resultItems[i].SubItems.Add(results[i].FirstName);
                 resultItems[i].SubItems.Add(results[i].LastName);
-                resultItems[i].SubItems.Add(results[i].);
+                resultItems[i].SubItems.Add(results[i].Email);
 
                 ParticipantControl.listView.Items.Add(resultItems[i]);
             }
         }
 
-        private void EmployeeSearch_TextChanged(object sender, EventArgs e)
+        private void CourseSearch_TextChanged(object sender, EventArgs e)
         {
-            EmployeeControl.listView.Clear();
+            CourseControl.listView.Clear();
 
-            List<Employee> results = SearchControl.Search<Employee>(EmployeeControl.SearchBox.Text);
+            List<Course> results = SearchControl.Search<Course>(CourseControl.SearchBox.Text);
             ListViewItem[] resultItems = new ListViewItem[results.Count];
 
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].FirstName);
-                resultItems[i].SubItems.Add(results[i].LastName);
-                resultItems[i].SubItems.Add(results[i].initials);
+                resultItems[i].SubItems.Add(results[i].CourseName);
+                resultItems[i].SubItems.Add(results[i].Difficulty);
+                resultItems[i].SubItems.Add(results[i].TypeID);
 
-                EmployeeControl.listView.Items.Add(resultItems[i]);
+                CourseControl.listView.Items.Add(resultItems[i]);
             }
         }
 
-        private void EmployeeSearch_TextChanged(object sender, EventArgs e)
+        private void ClassSearch_TextChanged(object sender, EventArgs e)
         {
-            EmployeeControl.listView.Clear();
+            ClassControl.listView.Clear();
 
-            List<Employee> results = SearchControl.Search<Employee>(EmployeeControl.SearchBox.Text);
+            List<Class> results = SearchControl.Search<Class>(ClassControl.SearchBox.Text);
             ListViewItem[] resultItems = new ListViewItem[results.Count];
 
             for (int i = 0; i < results.Count; i++)
             {
                 resultItems[i] = new ListViewItem(results[i].ID.ToString());
-                resultItems[i].SubItems.Add(results[i].FirstName);
-                resultItems[i].SubItems.Add(results[i].LastName);
-                resultItems[i].SubItems.Add(results[i].initials);
+                resultItems[i].SubItems.Add(results[i].ClassName);
+                resultItems[i].SubItems.Add(results[i].CourseID);
+                resultItems[i].SubItems.Add(results[i].RoomID);
+                resultItems[i].SubItems.Add(results[i].PersonID);
 
-                EmployeeControl.listView.Items.Add(resultItems[i]);
+                ClassControl.listView.Items.Add(resultItems[i]);
             }
         }
 
